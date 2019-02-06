@@ -44,6 +44,19 @@ html {
     width: 50px;
     text-align: center;
     margin-left: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    vertical-align: center;
+}
+
+.three-button span {
+    margin-left: 5px;
+}
+
+.three-button>li:hover {
+    background-color: rgba(200, 200, 200, 0.2);
 }
 
 .three-button a {
@@ -75,7 +88,7 @@ html {
 
 .two-button {
     height: 80px;
-    width: 300px;
+    width: 350px;
     border: 1px solid black;
     margin-left: 200px;
 }
@@ -84,19 +97,37 @@ html {
     width: 80px;
     height: 40px;
     margin-top: 20px;
-    border: 1px solid black;
     text-align: center;
     line-height: 40px;
+    padding: 5px 18px;
+    border-radius: 3px;
+    border: 2px solid #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.two-button span {
+    margin-left: 5px;
 }
 
 .left-button {
     float: left;
     margin-left: 20px;
+    background-color: #fff;
+    color: #000;
+}
+
+.left-button:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
 }
 
 .right-button {
     float: right;
     margin-right: 20px;
+}
+
+.right-button:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18);
 }
 
 .arrow {
@@ -134,7 +165,7 @@ html {
 }
 
 .second-page {
-    height: 1000px;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 100%;
@@ -176,24 +207,24 @@ html {
 }
 
 .big1 {
-    animation-delay: 0s;
+    animation-delay: 2s;
     /* 延迟时间 */
     animation: zoomIn 1.2s 1 ease-in-out;
     /*动画*/
 }
 
 .big2 {
-    animation-delay: 2s;
-    animation: zoomIn 1.2s 1 ease-in-out;
-}
-
-.big3 {
     animation-delay: 4s;
     animation: zoomIn 1.2s 1 ease-in-out;
 }
 
-.big4 {
+.big3 {
     animation-delay: 6s;
+    animation: zoomIn 1.2s 1 ease-in-out;
+}
+
+.big4 {
+    animation-delay: 8s;
     animation: zoomIn 1.2s 1 ease-in-out;
 }
 
@@ -206,4 +237,8 @@ html {
         opacity: 1;
         transform: scale3d(1, 1, 1);
     }
+}
+
+.why {
+    background-color: #f5f5f5;
 }
