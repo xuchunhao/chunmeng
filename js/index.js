@@ -1,7 +1,7 @@
-var registerClick = document.getElementsByClassName('register-click');
-var register = document.getElementsByClassName('register')[0];
-var loginClick = document.getElementsByClassName('login-click');
-var login = document.getElementsByClassName('login')[0];
+var registerClick = document.getElementsByClassName('register-click'),
+    register = document.getElementsByClassName('register')[0],
+    loginClick = document.getElementsByClassName('login-click'),
+    login = document.getElementsByClassName('login')[0];
 
 function registerClickEvent() {
     for (var i = 0; i < registerClick.length; i++) {

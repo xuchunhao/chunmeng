@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body,
+html,
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+}
+
+.left-menu {
+    width: 250px;
+    height: 100%;
+    background-color: #191919;
+    float: left;
+    color: #fff;
+}
+
+dl dt,
+dl dd {
+    height: 60px;
+    line-height: 60px;
+}
+
+dl dt {
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+dl dd {
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+dl dd:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+dl dd.active {
+    background-color: #e91e63;
+}
+
+.right-content {
+    width: calc(100% - 200px);
+    height: 100%;
+    float: left;
+}
