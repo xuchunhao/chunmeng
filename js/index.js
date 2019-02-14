@@ -46,7 +46,9 @@ $(window).scroll(function() {
     }
 });
 
-
+$('button').click(function(e) {
+    e.preventDefault();
+})
 $(document).ready(function() {
     $(".login-btn").click(function(e) {
         e.preventDefault();
