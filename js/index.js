@@ -32,3 +32,44 @@ function delRegister() {
 registerClickEvent();
 loginClickEvent();
 delRegister();
+
+
+$(document).ready(function() {
+    $(".login-btn").click(function(e) {
+        e.preventDefault();
+        var loginForm = document.getElementById('login-form');
+        var id = loginForm.id.value;
+        var password = loginForm.password.value;
+        $.ajax({
+            type: "POST",
+            url: "/api/user/login",
+            contentType: 'application/json',
+            data: JSON.stringify({
+                'credential': id,
+                'password': password
+            }),
+            dataType: 'json',
+            success: function(response) {
+                var tok = response.token;
+                var status = response.status;
+                if (status == 0) {
+                    $.ajax({
+                        type: "GET",
+                        url: "/api/user/info",
+                        contentType: 'application/json',
+                        data: {
+                            'token': tok
+                        },
+                        dataType: 'json',
+                        success: function(res) {
+                            var id = res.info.id;
+                            window.location.href = "./secondpage.html?txt=" + id;
+                        }
+                    })
+                } else if (status == -1) {
+                    alert("账号或密码错误");
+                }
+            }
+        })
+    })
+})
