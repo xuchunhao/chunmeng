@@ -67,6 +67,8 @@ $(document).ready(function() {
                         }
                     })
                 } else if (status == -1) {
+                    alert("未知错误");
+                } else if (status == 1) {
                     alert("账号或密码错误");
                 }
             }
