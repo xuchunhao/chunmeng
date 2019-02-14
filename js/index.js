@@ -33,6 +33,19 @@ registerClickEvent();
 loginClickEvent();
 delRegister();
 
+$(window).scroll(function() {
+    var content = document.getElementsByClassName('four-rows')[0];
+    if (content.offsetTop <= window.pageYOffset + window.innerHeight) {
+        $('.big1').animate({ fontSize: "20px", opacity: "1" }, 500, 'swing', function() {
+            $('.big2').animate({ fontSize: "20px", opacity: "1" }, 500, 'swing', function() {
+                $('.big3').animate({ fontSize: "20px", opacity: "1" }, 500, 'swing', function() {
+                    $('.big4').animate({ fontSize: "20px", opacity: "1" }, 500, 'swing')
+                })
+            })
+        })
+    }
+});
+
 
 $(document).ready(function() {
     $(".login-btn").click(function(e) {
