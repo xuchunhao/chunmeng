@@ -139,8 +139,7 @@ html {
     animation: bounce 3s infinite;
 }
 
-
-/* @keyframes bounce {
+@keyframes bounce {
     0%,
     20%,
     50%,
@@ -163,7 +162,7 @@ html {
         -webkit-transform: translateY(-15px);
         transform: translateY(-15px);
     }
-} */
+}
 
 .second-page {
     height: 100%;

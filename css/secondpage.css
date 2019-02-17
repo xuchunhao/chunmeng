@@ -9,15 +9,15 @@ html,
 .wrapper {
     width: 100%;
     height: 100%;
-    background-color: #eee;
+    background-color: #fafafa;
 }
 
 .left-menu {
     width: 250px;
     height: 100%;
-    background-color: #191919;
+    background-color: #f8f8f8;
     float: left;
-    color: #fff;
+    color: #000;
 }
 
 dl dt,
@@ -37,15 +37,82 @@ dl dd {
 }
 
 dl dd:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 dl dd.active {
-    background-color: #e91e63;
+    background-color: rgba(14, 99, 236, 0.1);
 }
 
 .right-content {
-    width: calc(100% - 200px);
+    width: calc(100% - 250px);
     height: 100%;
     float: left;
+}
+
+.right-content>div {
+    display: none;
+    padding: 10px 15px;
+    width: 90%;
+    height: 90%;
+    border: 1px solid black;
+    margin: 30px auto 0;
+    border-radius: 6px;
+}
+
+.right-content div.show {
+    display: block;
+}
+
+.find .find-top,
+.lost .lost-top {
+    margin-bottom: 20px;
+    width: 90%;
+    height: 40px;
+    border: 1px solid red;
+}
+
+.find .find-top .btn,
+.lost .lost-top .btn {
+    cursor: pointer;
+    color: #3c8dff;
+    padding: 0 5px;
+}
+
+.find .find-top .btn.active,
+.lost .lost-top .btn.active {
+    color: #fff;
+    border-radius: 4px;
+    background: #3c8dff;
+}
+
+.find .find-bottom ul li,
+.lost .lost-bottom ul li {
+    position: relative;
+    border: 1px solid black;
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.find .find-bottom ul li>div>p,
+.lost .lost-bottom ul li>div>p {
+    display: inline;
+}
+
+.find .find-bottom ul li img,
+.lost .lost-bottom ul li img {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.find .find-bottom ul li .fl-button,
+.lost .lost-bottom ul li .fl-button {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 18px);
 }
