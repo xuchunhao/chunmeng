@@ -61,10 +61,26 @@ $(window).scroll(function() {
 //         })
 //     }
 // });
+
 $('button').click(function(e) {
     e.preventDefault();
 })
 $(document).ready(function() {
+    $.ajax({
+        type: "POST",
+        url: "/api2/captcha",
+        contentType: 'application/json',
+        data: {
+            "id": 1,
+            "status": 0,
+            "type": "img",
+            "subtype": "generate",
+            "data": {}
+        },
+        success: function(response) {
+            console.log(response);
+        }
+    })
     $(".login-btn").click(function(e) {
         e.preventDefault();
         var loginForm = document.getElementById('login-form');
@@ -93,7 +109,9 @@ $(document).ready(function() {
                         dataType: 'json',
                         success: function(res) {
                             var id = res.info.id;
-                            window.location.href = "./secondpage.html?txt=" + id;
+                            // window.location.href = "./secondpage.html";
+                            localStorage.setItem('myCat', id)
+                                // window.location.href = "./secondpage.html?txt=" + id;
                         }
                     })
                 } else if (status == -1) {
