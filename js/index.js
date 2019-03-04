@@ -68,7 +68,7 @@ $('button').click(function(e) {
 $(document).ready(function() {
     $.ajax({
         type: "POST",
-        url: "/api2/captcha",
+        url: "/abc/captcha",
         contentType: 'application/json',
         data: {
             "id": 1,
