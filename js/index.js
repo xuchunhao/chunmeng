@@ -36,14 +36,10 @@ delRegister();
 $(window).scroll(function() {
     var content = document.getElementsByClassName('four-rows')[0];
     if (content.offsetTop <= window.pageYOffset + window.innerHeight) {
-        $('.big1').animate({ fontSize: "20px", opacity: "1" }, 500, 'swing');
-        $('.big-follow1').animate({ opacity: "1" }, 500, 'swing', function() {
-            $('.big2').animate({ fontSize: "20px", opacity: "1" }, 500, 'swing');
-            $('.big-follow2').animate({ opacity: "1" }, 500, 'swing', function() {
-                $('.big3').animate({ fontSize: "20px", opacity: "1" }, 500, 'swing');
-                $('.big-follow3').animate({ opacity: "1" }, 500, 'swing', function() {
-                    $('.big4').animate({ fontSize: "20px", opacity: "1" }, 500, 'swing');
-                    $('.big-follow4').animate({ opacity: "1" }, 500, 'swing');
+        $('.row1').children().animate({ opacity: "1" }, 500, 'swing', function() {
+            $('.row2').children().animate({ opacity: "1" }, 500, 'swing', function() {
+                $('.row3').children().animate({ opacity: "1" }, 500, 'swing', function() {
+                    $('.row4').children().animate({ opacity: "1" }, 500, 'swing');
                 })
             })
         })
@@ -109,7 +105,7 @@ $(document).ready(function() {
                         dataType: 'json',
                         success: function(res) {
                             var id = res.info.id;
-                            // window.location.href = "./secondpage.html";
+                            window.location.href = "./secondpage.html";
                             localStorage.setItem('myCat', id)
                                 // window.location.href = "./secondpage.html?txt=" + id;
                         }
