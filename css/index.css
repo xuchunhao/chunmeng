@@ -248,6 +248,8 @@ html {
     text-align: center;
     display: block;
     width: 1800px;
+    position: absolute;
+    left: calc(50% - 900px);
 }
 
 .introduce .introduce-content {
