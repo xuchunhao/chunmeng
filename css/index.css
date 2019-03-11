@@ -396,29 +396,35 @@ html {
 }
 
 .bottom-content {
-    height: 7%;
+    height: 8%;
     width: 100%;
     background: #303f9f;
     position: relative;
 }
 
-.bottom-content img {
+.bottom-content>img {
     width: 100px;
     height: 80px;
-    position: absolute;
+    /* position: absolute;
     left: calc(50% - 50px);
-    top: 10px;
+    top: 10px; */
+    margin: 0 auto;
+    display: block;
 }
 
-.bottom-content div {
+.bottom-content>div {
     width: 800px;
-    height: 40px;
     background: rgba(0, 0, 0, 0.2);
     color: rgba(255, 255, 255, 0.6);
     text-align: center;
-    position: absolute;
-    bottom: 20px;
-    left: calc(50% - 400px);
+    margin: 0 auto 20px;
+    /* position: absolute; */
+    /* bottom: 20px;
+    left: calc(50% - 400px); */
+}
+
+.bottom-content div a {
+    color: #939393;
 }
 
 
