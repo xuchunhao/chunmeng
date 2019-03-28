@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ZUST Service</title>
+    <link rel="stylesheet" href="./css/bootstrap-3.css">
     <link rel="stylesheet" href="./css/index.css">
-
+    <link rel="shortcut icon" href="./img/logo_2.ico" type="image/x-icon">
     <style>
         .icon {
             width: 1.5em;
@@ -19,289 +20,283 @@
         }
         
         .iconblack {
-            width: 1.5em;
-            height: 1.5em;
             color: #000;
-            vertical-align: -5px;
-            fill: currentColor;
-            overflow: hidden;
-        }
-        
-        .iconyellow {
-            width: 4em;
-            height: 4em;
-            color: #ff9800;
-            vertical-align: -5px;
-            fill: currentColor;
-            overflow: hidden;
-            margin-top: 30px;
-        }
-        
-        .iconblue {
-            width: 4em;
-            height: 4em;
-            color: #00bcd4;
-            vertical-align: -5px;
-            fill: currentColor;
-            overflow: hidden;
-            margin-top: 30px;
-        }
-        
-        .iconred {
-            width: 4em;
-            height: 4em;
-            color: #F44336;
-            vertical-align: -5px;
-            fill: currentColor;
-            overflow: hidden;
-            margin-top: 30px;
         }
         
         .iconbig {
-            width: 2.5em;
-            height: 2.5em;
-            color: #fff;
-            vertical-align: -5px;
-            fill: currentColor;
-            overflow: hidden;
-            margin-top: 50px;
+            width: 3em;
+            height: 3em;
+        }
+        
+        .iconyellow {
+            color: #ff9800;
+        }
+        
+        .iconblue {
+            color: #00bcd4;
+        }
+        
+        .iconred {
+            color: #F44336;
+        }
+        
+        .iconlarge {
+            width: 5em;
+            height: 5em;
+        }
+        
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus {
+            outline: none;
         }
     </style>
 </head>
 
 <body>
     <script src="./js/iconfont.js"></script>
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/localStorage.js"></script>
-    <div class="first-page">
-        <div class="top-nav">
-            <div class="tittle">「码三秃」团队主持开发运维</div>
-            <ul class="three-button">
-                <li class="button1">
-                    <a href="#" class="login-click"><svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-zhiwen"></use>
-                        </svg><span>登录</span></a>
-                </li>
-                <li class="button2">
-                    <a href="#" class="register-click"><svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-zhucetianjiahaoyou
-                            "></use>
-                        </svg><span>注册</span></a>
-                </li>
-                <li class="button3">
-                    <a href="#"><svg class="icon" aria-hidden="true">
-                            <use xlink:href="#icon-shouye"></use>
-                        </svg><span>首页</span></a>
-                </li>
-            </ul>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- 左边logo和缩小时右边图标 -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">「码三秃」团队主持开发运维</a>
+                </div>
+
+                <!-- 右边仨按钮 -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="./index.html">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-shouye"></use>
+                                </svg>
+                                <span>首页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-zhucetianjiahaoyou"></use>
+                                </svg>
+                                <span>注册</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-zhiwen"></use>
+                                </svg>
+                                <span>登录</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="view">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-6 text-center">
+                        <div class="big-logo">ZUST Service</div>
+                        <br>
+                        <div class="big-content">「校园自主与互助服务平台」</div>
+                        <br>
+                        <br>
+                        <div class="two-buttons">
+                            <a class="btn btn-default  btn-left" href="#" role="button">
+                                <svg class="icon iconblack" aria-hidden="true">
+                                    <use xlink:href="#icon-denglu"></use>
+                                </svg>
+                                <span>&nbsp;注册</span>
+                            </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="btn btn-default btn-right" href="#" role="button">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-zhuce"></use>
+                                </svg>
+                                <span>&nbsp;登录</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="arrow text-center">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-arrow-up1"></use>
+            </svg>
         </div>
-        <div class="container">
-            <div class="big-logo">
-                ZUST Service
-            </div>
-            <div class="bigsentence">
-                「校园自主与互助服务平台」
-            </div>
-            <div class="two-button">
-                <div class="left-button login-click"><svg class="iconblack" aria-hidden="true">
-                        <use xlink:href="#icon-denglu"></use>
-                    </svg><span>登录</span></div>
-                <div class="right-button register-click"><svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-zhuce
-                        "></use>
-                    </svg><span>注册</span></div>
-            </div>
-        </div>
-        <div class="arrow"><svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-arrow-up1"></use>
-          </svg></div>
-        <div class="register">
-            <div class="mask"></div>
-            <div class="register-form">
-                <h1>register</h1>
-                <form action="#" id="register-form">
-                    <div>
-                        <label for="number">学号</label>
-                        <input type="text" name="id">
+    </header>
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <section class="four-rows text-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 deep-purple">
+                        <div class="row1">
+                            <svg class="iconbig icon" aria-hidden="true">
+                            <use xlink:href="#icon-shuju"></use>
+                        </svg>
+                            <div>信息发布</div>
+                            <p>失物招领&寻物启事，活动通知，推广宣传……你想要的信息这里一应俱全</p>
+                        </div>
                     </div>
-                    <div>
-                        <label for="name">姓名</label>
-                        <input type="text" name="name">
+                    <div class="col-lg-3 col-md-6 col-sm-12 light-purple">
+                        <div class="row2">
+                            <svg class="iconbig icon" aria-hidden="true">
+                            <use xlink:href="#icon-shuju1"></use>
+                        </svg>
+                            <div>订购服务</div>
+                            <p>在这里你可以快捷订水、订餐。 订购我们支持的校园内服务</p>
+                        </div>
                     </div>
-                    <div>
-                        <label for="phone">手机</label>
-                        <input type="text" name="phone">
+                    <div class="col-lg-3 col-md-6 col-sm-12 deep-green">
+                        <div class="row3">
+                            <svg class="iconbig icon" aria-hidden="true">
+                            <use xlink:href="#icon-shejiao"></use>
+                        </svg>
+                            <div>代领服务</div>
+                            <p>发布你的代领信息，由平台上的童鞋帮你代领物件 代领人员由平台指派管理，安全可靠</p>
+                        </div>
                     </div>
-                    <div>
-                        <label for="password">密码</label>
-                        <input type="password" name="password">
+                    <div class="col-lg-3 col-md-6 col-sm-12 light-blue">
+                        <div class="row4">
+                            <svg class="iconbig icon" aria-hidden="true">
+                            <use xlink:href="#icon-laba"></use>
+                        </svg>
+                            <div>自主加盟</div>
+                            <p>为那些有点子，有想法的童鞋们开放的自主加盟平台， 这里是你们的天地！让更多的人认识你！</p>
+                        </div>
                     </div>
-                    <div>
-                        <img src="" alt="" class="">
-                        <input type="text">
-                    </div>
-                    <div>
-                        <input type="submit" class="btn register-btn">
-                        <button class="btn del">取消</button>
-                    </div>
-                </form>
+                </section>
             </div>
         </div>
-        <div class="login">
-            <div class="mask"></div>
-            <div class="register-form">
-                <h1>login</h1>
-                <form action="#" id="login-form">
-                    <div>
-                        <label for="number">学号</label>
-                        <input type="text" name="id">
+        <section class="about text-center">
+            <div class="container">
+                <div class="wow">
+                    <h1>项目简介</h1>
+                    <p>“校园自主与互助服务平台”是由浙江科技学院蓝色空间「码三秃」团队主持开发并运维的一项面向校园师生的开放型平台， 该项目目前正在参加校春萌项目</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <svg class="icon iconyellow iconlarge" aria-hidden="true">
+                            <use xlink:href="#icon-sudu"></use>
+                        </svg>
+                        <h3>发展</h3>
+                        <p>从零基础入门到现在小有成果，团队三人历经 一个月的学习摸索，做出了这个项目的雏形。</p>
                     </div>
-                    <div>
-                        <label for="password">密码</label>
-                        <input type="password" name="password">
+                    <div class="col-md-4">
+                        <svg class="iconblue icon iconlarge" aria-hidden="true">
+                            <use xlink:href="#icon-jiaoliu"></use>
+                        </svg>
+                        <h3>沟通</h3>
+                        <p>团队通过GitHub进行团队项目开发，并利用Telegram进行团队间交流，利用TG插件关注项目进度。</p>
                     </div>
-                    <div>
-                        <img src="" alt="" class="captcha">
-                        <input type="text">
+                    <div class="col-md-4">
+                        <svg class="iconred icon iconlarge" aria-hidden="true">
+                            <use xlink:href="#icon-lifangti"></use>
+                        </svg>
+                        <h3>团队</h3>
+                        <p>「码三秃」团队由三位志同道合的有“痣”青年组成。想当初组队时的一时上头，真不敢相信我们做出来了。</p>
                     </div>
-                    <div>
-                        <button class="btn login-btn">登录</button>
-                        <button class="btn del">取消</button>
-                    </div>
-                </form>
+                </div>
             </div>
-        </div>
+        </section>
+        <section class="finally">
+            <div class="container">
+                <h1>项目特色</h1>
+                <div class="row">
+                    <div class="col-lg-6 col-xl-5 row-img">
+                        <img src="./img/pic1.png" alt="">
+                    </div>
+                    <div class="col-lg-6 col-xl-7">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="./img/one.png" alt="">
+                            </div>
+                            <div class="col-md-10">
+                                <div>信息发布</div>
+                                <p>在里面可以快速发布、浏览失物招领&寻物启事信息，闲置物品交易， 班级校级等通知类消息及时推送。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="./img/two.png" alt="">
+                            </div>
+                            <div class="col-md-10">
+                                <div>校园订购</div>
+                                <p>懒得出门？校园订购帮你解决校园快捷订水，食堂订餐以及其他一些 我们支持的校园内服务。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="./img/three.png" alt="">
+                            </div>
+                            <div class="col-md-10">
+                                <div>校园代领</div>
+                                <p>与校园订购服务紧密联系，为在平台上订购物品的同学提供快速的代领 配送服务，同时也加入了快递&信件代领等一些其他的配送服务。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row add-padding">
+                    <div class="col-lg-6 col-xl-7">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="./img/four.png" alt="">
+                            </div>
+                            <div class="col-md-10">
+                                <div>校园代领</div>
+                                <p>与校园订购服务紧密联系，为在平台上订购物品的同学提供快速的代领 配送服务，同时也加入了快递&信件代领等一些其他的配送服务。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <img src="./img/five.png" alt="">
+                            </div>
+                            <div class="col-md-10">
+                                <div>学生自主加盟</div>
+                                <p>平台创新型模式，为在校学生搭建平台，学生们可以在平台上开设属于自己 的服务，例如自主打印服务，技术维修服务，手工产品售卖等等。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-5 row-img">
+                        <img src="./img/pic2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="second-page">
-        <div class="content">
-            <div class="four-rows">
-                <div class="row row1">
-                    <svg class="iconbig" aria-hidden="true">
-                                <use xlink:href="#icon-shuju
-                                "></use>
-                    </svg>
-                    <div class="big1">信息发布</div>
-                    <p class="big-follow1">失物招领&寻物启事，活动通知，推广宣传……你想要的信息这里一应俱全</p>
-                </div>
-                <div class="row row2">
-                    <svg class="iconbig" aria-hidden="true">
-                                <use xlink:href="#icon-shuju1
-                                "></use>
-                    </svg>
-                    <div class="big2">订购服务</div>
-                    <p class="big-follow2">在这里你可以快捷订水、订餐。 订购我们支持的校园内服务
-                    </p>
-                </div>
-                <div class="row row3">
-                    <svg class="iconbig" aria-hidden="true">
-                                <use xlink:href="#icon-shejiao"></use>
-                              </svg>
-                    <div class="big3">代领服务</div>
-                    <p class="big-follow3">发布你的代领信息，由平台上的童鞋帮你代领物件 代领人员由平台指派管理，安全可靠
-                    </p>
-                </div>
-                <div class="row row4">
-                    <svg class="iconbig" aria-hidden="true">
-                                <use xlink:href="#icon-laba"></use>
-                              </svg>
-                    <div class="big4">自主加盟</div>
-                    <p class="big-follow4">为那些有点子，有想法的童鞋们开放的自主加盟平台， 这里是你们的天地！让更多的人认识你！
-                    </p>
-                </div>
-            </div>
-            <div class="introduce">
-                <div class="introduce-top">
-                    <p>项目简介</p>
-                    <span>“校园自主与互助服务平台”是由浙江科技学院蓝色空间「码三秃」团队主持开发并运维的一项面向校园师生的开放型平台，
-                            该项目目前正在参加校春萌项目</span>
-                </div>
-                <div class="introduce-content">
-                    <div class="introduce-left">
-                        <svg class="iconyellow" aria-hidden="true">
-                                    <use xlink:href="#icon-sudu"></use>
-                                  </svg>
-                        <p>发展</p>
-                        <span>从零基础入门到现在小有成果，团队三人历经 一个月的学习摸索，做出了这个项目的雏形。
-                        </span>
-                    </div>
-                    <div class="introduce-center">
-                        <svg class="iconblue" aria-hidden="true">
-                                    <use xlink:href="#icon-jiaoliu
-                                    "></use>
-                                  </svg>
-                        <p>沟通</p>
-                        <span>团队通过GitHub进行团队项目开发，
-                                并利用Telegram进行团队间交流，
-                                利用TG插件关注项目进度。</span>
-                    </div>
-                    <div class="introduce-right">
-                        <svg class="iconred" aria-hidden="true">
-                                    <use xlink:href="#icon-lifangti"></use>
-                                  </svg>
-                        <p>团队</p>
-                        <span>「码三秃」团队由三位志同道合的有“痣”青年组成。
-                                想当初组队时的一时上头，真不敢相信我们做出来了。
-                                </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="center-content">
-            <div class="center-tittle">项目特色</div>
-            <div class="top-center">
-                <ul>
-                    <img src="./img/pic1.png" alt="">
-                    <li>
-                        <img src="./img/one.png" alt="">
-                        <div>信息发布</div>
-                        <p>在里面可以快速发布、浏览失物招领&寻物启事信息，闲置物品交易， 班级校级等通知类消息及时推送。
-                        </p>
-                    </li>
-                    <li>
-                        <img src="./img/two.png" alt="">
-                        <div>校园订购</div>
-                        <p>懒得出门？校园订购帮你解决校园快捷订水，食堂订餐以及其他一些 我们支持的校园内服务。
-                        </p>
-                    </li>
-                    <li>
-                        <img src="./img/three.png" alt="">
-                        <div>校园代领</div>
-                        <p>与校园订购服务紧密联系，为在平台上订购物品的同学提供快速的代领 配送服务，同时也加入了快递&信件代领等一些其他的配送服务。
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="bottom-center">
-                <ul>
-                    <li>
-                        <img src="./img/four.png" alt="">
-                        <div>校园代领</div>
-                        <p>与校园订购服务紧密联系，为在平台上订购物品的同学提供快速的代领 配送服务，同时也加入了快递&信件代领等一些其他的配送服务。
-                        </p>
-                    </li>
-                    <li>
-                        <img src="./img/five.png" alt="">
-                        <div>学生自主加盟</div>
-                        <p>平台创新型模式，为在校学生搭建平台，学生们可以在平台上开设属于自己 的服务，例如自主打印服务，技术维修服务，手工产品售卖等等。
-                        </p>
-                    </li>
-                    <img src="./img/pic2.png" alt="">
-                </ul>
-            </div>
-        </div>
-        <div class="bottom-content">
+    <footer class="text-center">
+        <div class="container">
             <img src="./img/logo.png" alt="">
             <div>©界面主题 - Design By：许淳皓</div>
+            <div>浙ICP备19007544号</div>
             <div>
                 <img src="./img/beian.png" alt="">
                 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33030302000773">浙公网安备 33030302000773号</a>
             </div>
+
         </div>
-    </div>
-
-
+    </footer>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/localStorage.js"></script>
+    <script src="./js/bootstrap-3.js"></script>
     <script src="./js/index.js"></script>
-
 </body>
 
 </html>

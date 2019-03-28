@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"> -->
+    <link rel="stylesheet" href="./css/material-design.css">
+    <link rel="stylesheet" href="./css/secondpage.css">
+    <style>
+        .mdc-button--raised {
+            background-color: #abcdef;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/index.js"></script>
+    <div class="wrapper">
+        <div class="left-menu">
+            <dl id="menu-list">
+                <dt>学号</dt>
+                <dd class="active" data-id="find">寻物启事</dd>
+                <dd data-id="lost">失物招领</dd>
+                <dd data-id="represent">代领服务</dd>
+                <dd data-id="join">自主加盟</dd>
+                <dd data-id="user">用户中心</dd>
+                <dd data-id="control">后台管理</dd>
+            </dl>
+        </div>
+        <div class="right-content">
+            <div class="find show">
+                <div class="find-top">
+                    <span class="btn active" kind="card">卡类</span>
+                    <span class="btn" kind="ele">电子产品</span>
+                    <span class="btn" kind="book">书籍</span>
+                    <span class="btn" kind="day">日用品</span>
+                    <span class="btn" kind="other">其他</span>
+                </div>
+                <div class="find-bottom">
+                    <ul>
+                        <li>
+                            <img src="" alt="该物品无图">
+                            <div>
+                                <label for="">姓名:</label>
+                                <p class="name">xxx</p>
+                            </div>
+                            <div>
+                                <label for="">联系方式:</label>
+                                <p class="phone">123</p>
+                            </div>
+                            <div>
+                                <label for="">丢失物介绍:</label>
+                                <p class="des">丢了xxx</p>
+                            </div>
+                            <div>
+                                <label for="">备注:</label>
+                                <p class="remark">321</p>
+                            </div>
+                            <div>
+                                <label for="">种类:</label>
+                                <p class="kind">000</p>
+                            </div>
+                            <button class="mdc-button fl-button">找到它了</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lost">
+                <div class="lost-top">
+                    <span class="btn active" kind="card">卡类</span>
+                    <span class="btn" kind="ele">电子产品</span>
+                    <span class="btn" kind="book">书籍</span>
+                    <span class="btn" kind="day">日用品</span>
+                    <span class="btn" kind="other">其他</span>
+                </div>
+                <div class="lost-bottom">
+                    <ul>
+                        <li>
+                            <img src="" alt="该物品无图">
+                            <div>
+                                <label for="">姓名:</label>
+                                <p class="name">222</p>
+                            </div>
+                            <div>
+                                <label for="">联系方式:</label>
+                                <p class="phone">321</p>
+                            </div>
+                            <div>
+                                <label for="">丢失物介绍:</label>
+                                <p class="des">丢了x</p>
+                            </div>
+                            <div>
+                                <label for="">备注:</label>
+                                <p class="remark">321</p>
+                            </div>
+                            <div>
+                                <label for="">种类:</label>
+                                <p class="kind">卡</p>
+                            </div>
+                            <button class="mdc-button mdc-button--raised fl-button">询问一下</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="represent">代领服务</div>
+            <div class="join">自主加盟</div>
+            <div class="user">用户中心</div>
+            <div class="control">后台管理</div>
+        </div>
+    </div>
+    <script src="./js/secondpage.js"></script>
+</body>
+
+</html>
