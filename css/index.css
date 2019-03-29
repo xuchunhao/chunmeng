@@ -258,6 +258,10 @@ header .arrow {
     max-width: 100%;
 }
 
+#content .finally .row .row-img1 img {
+    margin-bottom: 30px;
+}
+
 #content .finally .row .col-md-1 img {
     width: 40px;
     height: 40px;

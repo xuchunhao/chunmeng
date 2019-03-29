@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap-3.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <style>
+        .icon {
+            width: 1.5em;
+            height: 1.5em;
+            color: #000;
+            vertical-align: -5px;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus {
+            outline: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- 左边logo和缩小时右边图标 -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">「码三秃」团队主持开发运维</a>
+                </div>
+
+                <!-- 右边仨按钮 -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="./index.html">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-shouye"></use>
+                                </svg>
+                                <span>首页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./register.html">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-zhucetianjiahaoyou"></use>
+                                </svg>
+                                <span>注册</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./login.html">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-zhiwen"></use>
+                                </svg>
+                                <span>登录</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="form text-center">
+        <div class="container">
+            <div class="row">
+                <form action="">
+                    <img src="./img/logo_2.png" alt="">
+                    <h1>登录</h1>
+                    <div>
+                        <input type="text" placeholder="请输入学号" name="id" id="id">
+                    </div>
+                    <div>
+                        <input type="password" placeholder="请输入密码" name="password" id="password">
+                    </div>
+                    <div class="captcha">
+                        <img src="" alt="">
+                        <input type="text" placeholder="请输入验证码">
+                    </div>
+                    <div>
+                        <button class="login-btn btn btn-primary btn-lg" type="submit">Button</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="./js/iconfont.js"></script>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/localStorage.js"></script>
+    <script src="./js/bootstrap-3.min.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

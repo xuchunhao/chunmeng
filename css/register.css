@@ -1,0 +1,49 @@
+header .navbar-default {
+    background-color: transparent;
+    border: none;
+    padding: 12px 0;
+}
+
+header .navbar .navbar-header .icon-bar {
+    background-color: #000;
+}
+
+header .navbar .navbar-header button {
+    border: none;
+}
+
+header .navbar .navbar-header button,
+header .navbar .navbar-header button:hover,
+header .navbar .navbar-header button:active,
+header .navbar .navbar-header button.collapsed {
+    background-color: transparent;
+}
+
+header .navbar-default .navbar-header .navbar-brand,
+header .navbar-default .navbar-nav>.active>a,
+header .navbar-default .navbar-nav>.active>a:hover,
+header .navbar-default .navbar-nav>.active>a:focus {
+    color: #000;
+}
+
+header .navbar-default .navbar-nav>.active>a,
+header .navbar-default .navbar-nav>.active>a:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+header .navbar-default .navbar-nav>.active>a:hover,
+header .navbar-default .navbar-nav>li>a:hover {
+    background: rgba(200, 200, 200, 0.2);
+    color: #000;
+    border-radius: 4px;
+}
+
+header .navbar-default .navbar-nav>li>a {
+    color: #000;
+    margin-right: 30px;
+}
+
+header .navbar-default .navbar-nav>li>a>span {
+    margin-left: 10px;
+}
