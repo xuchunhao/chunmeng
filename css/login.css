@@ -84,8 +84,7 @@ header .navbar-default .navbar-nav>li>a>span {
     height: 50px;
     border-radius: 5px;
     font-size: 20px;
-    border: 1px solid #ccc;
-    /* box-shadow: 0 0 0 0; */
+    border: 1px solid #ddd;
 }
 
 .form form div input::placeholder {

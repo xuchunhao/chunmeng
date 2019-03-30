@@ -1,3 +1,5 @@
+/* 导航栏 */
+
 header .navbar-default {
     background-color: transparent;
     border: none;
@@ -10,6 +12,11 @@ header .navbar .navbar-header .icon-bar {
 
 header .navbar .navbar-header button {
     border: none;
+}
+
+header .navbar .navbar-header a img {
+    width: 80px;
+    height: 80px;
 }
 
 header .navbar .navbar-header button,
@@ -47,3 +54,60 @@ header .navbar-default .navbar-nav>li>a {
 header .navbar-default .navbar-nav>li>a>span {
     margin-left: 10px;
 }
+
+
+/* 导航栏 */
+
+
+/* 框 */
+
+.form {
+    margin-top: 10%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 30px 0;
+}
+
+.form form .captcha {
+    display: none;
+}
+
+.form form div {
+    padding-top: 20px;
+}
+
+.form form div input {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid #ddd;
+}
+
+.form form div input::placeholder {
+    padding-left: 10px;
+}
+
+.form form .captcha input {
+    width: 150px;
+    margin-left: 50px;
+}
+
+.form form div input:focus {
+    outline: none;
+}
+
+.form form div button {
+    background-color: #1a73e8;
+}
+
+.form form div a {
+    color: #1a73e8;
+    font-size: 16px;
+}
+
+
+/* 框 */

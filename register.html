@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>注册</title>
     <link rel="stylesheet" href="./css/bootstrap-3.min.css">
     <link rel="stylesheet" href="./css/login.css">
     <style>
@@ -21,7 +21,6 @@
 </head>
 
 <body>
-    <script src="./js/iconfont.js"></script>
     <header>
         <nav class="navbar navbar-default">
             <div class="container">
@@ -33,7 +32,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">「码三秃」团队主持开发运维</a>
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="./img/logo_2.png" alt="">
+                    </a>
                 </div>
 
                 <!-- 右边仨按钮 -->
@@ -47,30 +48,38 @@
                                 <span>首页</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="./register.html">
-                                <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="#icon-zhucetianjiahaoyou"></use>
-                                </svg>
-                                <span>注册</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./login.html">
-                                <svg class="icon" aria-hidden="true">
-                                    <use xlink:href="#icon-zhiwen"></use>
-                                </svg>
-                                <span>登录</span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <section class="form text-center">
+        <form action="">
+            <h1>注册</h1>
+            <div>
+                <input type="text" placeholder="请输入学号" name="id" id="id">
+            </div>
+            <div>
+                <input type="password" placeholder="请输入密码" name="password" id="password">
+            </div>
+
+            <div class="captcha">
+                <img src="" alt="">
+                <input type="text" placeholder="请输入验证码">
+            </div>
+            <div>
+                <a href="./register.html">登录账号</a>
+            </div>
+            <div>
+                <button class="login-btn btn btn-primary btn-lg" type="submit">确认</button>
+            </div>
+        </form>
+    </section>
+    <script src="./js/iconfont.js"></script>
     <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/localStorage.js"></script>
     <script src="./js/bootstrap-3.min.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/register.js"></script>
 </body>
 
 </html>
