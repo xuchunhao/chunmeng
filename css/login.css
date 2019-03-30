@@ -14,6 +14,11 @@ header .navbar .navbar-header button {
     border: none;
 }
 
+header .navbar .navbar-header a img {
+    width: 80px;
+    height: 80px;
+}
+
 header .navbar .navbar-header button,
 header .navbar .navbar-header button:hover,
 header .navbar .navbar-header button:active,
@@ -68,11 +73,6 @@ header .navbar-default .navbar-nav>li>a>span {
     padding-top: 20px;
 }
 
-.form div div form img {
-    width: 80px;
-    height: 80px;
-}
-
 .form div div form div input {
     width: 300px;
     height: 50px;
@@ -91,6 +91,11 @@ header .navbar-default .navbar-nav>li>a>span {
 
 .form div div form div button {
     background-color: #1a73e8;
+}
+
+.form div div form div a {
+    color: #1a73e8;
+    font-size: 16px;
 }
 
 

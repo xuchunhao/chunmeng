@@ -28,7 +28,52 @@ function imgCaptcha() {
     })
 }
 
-
+function login(x, y) {
+    $.ajax({
+        type: "POST",
+        url: "/api/user/login",
+        contentType: 'application/json',
+        data: JSON.stringify({
+            'credential': x,
+            'password': y
+        }),
+        dataType: 'json',
+        success: function(response) {
+            var tok = response.token;
+            var status = response.status;
+            localStorage.setItem('myCat', tok);
+            window.location.href = "./secondpage.html";
+            // if (status == 0) {
+            //     $.ajax({
+            //         type: "GET",
+            //         url: "/api/user/info",
+            //         contentType: 'application/json',
+            //         data: {
+            //             'token': tok
+            //         },
+            //         dataType: 'json',
+            //         success: function(res) {
+            //             var id = res.info.id;
+            //             window.location.href = "./secondpage.html";
+            //             localStorage.setItem('myCat', id)
+            //                 // window.location.href = "./secondpage.html?txt=" + id;
+            //         }
+            //     })
+            // }
+        },
+        error: function(response) {
+            var responseObj = response.responseJSON;
+            var status = $.parseJSON(responseObj.status);
+            if (status == -1) {
+                alert("未知错误");
+            } else if (status == 1) {
+                alert("账号或密码错误");
+                count++;
+                setLocalStorage('count', count);
+            }
+        }
+    })
+}
 
 $(document).ready(function() {
         $(".login-btn").click(function(e) {
@@ -40,52 +85,9 @@ $(document).ready(function() {
                 return
             }
             if (count >= 2) {
-                imgCaptcha(id, password);
+                imgCaptcha();
             }
-            $.ajax({
-                type: "POST",
-                url: "/api/user/login",
-                contentType: 'application/json',
-                data: JSON.stringify({
-                    'credential': id,
-                    'password': password
-                }),
-                dataType: 'json',
-                success: function(response) {
-                    var tok = response.token;
-                    var status = response.status;
-                    localStorage.setItem('myCat', tok);
-                    window.location.href = "./secondpage.html";
-                    // if (status == 0) {
-                    //     $.ajax({
-                    //         type: "GET",
-                    //         url: "/api/user/info",
-                    //         contentType: 'application/json',
-                    //         data: {
-                    //             'token': tok
-                    //         },
-                    //         dataType: 'json',
-                    //         success: function(res) {
-                    //             var id = res.info.id;
-                    //             window.location.href = "./secondpage.html";
-                    //             localStorage.setItem('myCat', id)
-                    //                 // window.location.href = "./secondpage.html?txt=" + id;
-                    //         }
-                    //     })
-                    // }
-                },
-                error: function(response) {
-                    var responseObj = response.responseJSON;
-                    var status = $.parseJSON(responseObj.status);
-                    if (status == -1) {
-                        alert("未知错误");
-                    } else if (status == 1) {
-                        alert("账号或密码错误");
-                        count++;
-                        setLocalStorage('count', count);
-                    }
-                }
-            })
+            login(id, password);
         })
     })
     // TODO 验证码改成小写
