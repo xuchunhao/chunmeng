@@ -71,8 +71,8 @@ header .navbar-default .navbar-nav>li>a>span {
     padding: 30px 0;
 }
 
-.form form .captcha {
-    display: none;
+.form form .img-captcha {
+    /* display: none; */
 }
 
 .form form div {
@@ -91,7 +91,7 @@ header .navbar-default .navbar-nav>li>a>span {
     padding-left: 10px;
 }
 
-.form form .captcha input {
+.form form .img-captcha input {
     width: 150px;
     margin-left: 50px;
 }

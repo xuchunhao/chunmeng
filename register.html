@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>注册</title>
     <link rel="stylesheet" href="./css/bootstrap-3.min.css">
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/register.css">
     <style>
         .icon {
             width: 1.5em;
@@ -62,21 +62,34 @@
             <div>
                 <input type="password" placeholder="请输入密码" name="password" id="password">
             </div>
-
-            <div class="captcha">
+            <div>
+                <input type="text" placeholder="请输入姓名" name="name" id="name">
+            </div>
+            <div class="img-captcha">
                 <img src="" alt="">
-                <input type="text" placeholder="请输入验证码">
+                <input class="img-captcha-input" type="text" placeholder="请输入验证码">
+            </div>
+            <div>
+                <input type="text" placeholder="请输入手机" name="phone" id="phone">
+            </div>
+            <div>
+                <button class="get" type="submit">获取验证码</button>
+            </div>
+            <div>
+                <input type="text" placeholder="请输入手机验证码" name="phone-captcha" id="phone-captcha">
             </div>
             <div>
                 <a href="./register.html">登录账号</a>
             </div>
             <div>
-                <button class="login-btn btn btn-primary btn-lg" type="submit">确认</button>
+                <button class="register-btn btn btn-primary btn-lg" type="submit">确认</button>
             </div>
         </form>
     </section>
     <script src="./js/iconfont.js"></script>
     <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/md5.js"></script>
+    <script src="./js/imgCaptcha.js"></script>
     <script src="./js/localStorage.js"></script>
     <script src="./js/bootstrap-3.min.js"></script>
     <script src="./js/register.js"></script>
