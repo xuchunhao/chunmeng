@@ -67,19 +67,19 @@
             </div>
             <div class="img-captcha">
                 <img src="" alt="">
-                <input class="img-captcha-input" type="text" placeholder="请输入验证码">
+                <input class="img-captcha-input" type="text" placeholder="请输入验证码">&nbsp;
+                <span class="glyphicon ico"></span>
             </div>
             <div>
                 <input type="text" placeholder="请输入手机" name="phone" id="phone">
-            </div>
-            <div>
-                <button class="get" type="submit">获取验证码</button>
+                <a href="javascript:;" class="get" style="display:block;padding:10px 0">获取手机验证码</a>
+                <p></p>
             </div>
             <div>
                 <input type="text" placeholder="请输入手机验证码" name="phone-captcha" id="phone-captcha">
             </div>
             <div>
-                <a href="./register.html">登录账号</a>
+                <a href="./login.html">登录账号</a>
             </div>
             <div>
                 <button class="register-btn btn btn-primary btn-lg" type="submit">确认</button>
@@ -90,6 +90,7 @@
     <script src="./js/jquery-2.1.4.min.js"></script>
     <script src="./js/md5.js"></script>
     <script src="./js/imgCaptcha.js"></script>
+    <script src="./js/imgCaptchaOnblur.js"></script>
     <script src="./js/localStorage.js"></script>
     <script src="./js/bootstrap-3.min.js"></script>
     <script src="./js/register.js"></script>

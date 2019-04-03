@@ -1,3 +1,5 @@
+var imgRand = "";
+
 function imgCaptcha() {
     var baseObj = {};
     var base = "";
@@ -13,12 +15,14 @@ function imgCaptcha() {
             "data": {}
         }),
         success: function(response) {
+
+            lock = true;
             baseObj = $.parseJSON(response);
             base = baseObj.data.imgdata;
             var $captcha = $('.img-captcha');
             $captcha.find('img').attr('src', 'data:image/png;base64,' + base);
             $captcha.css({ display: 'block' });
-            rand = baseObj.data.rand;
+            imgRand = baseObj.data.rand;
         },
         error: function(error) {
             console.log(error.status, error.statusText);

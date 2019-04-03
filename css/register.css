@@ -62,7 +62,8 @@ header .navbar-default .navbar-nav>li>a>span {
 /* 框 */
 
 .form {
-    margin-top: 10%;
+    margin-top: 10vh;
+    margin-bottom: 50px;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -93,7 +94,7 @@ header .navbar-default .navbar-nav>li>a>span {
 
 .form form .img-captcha input {
     width: 150px;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .form form div input:focus {

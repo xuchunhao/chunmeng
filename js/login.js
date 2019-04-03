@@ -1,7 +1,10 @@
 var countData = 0,
     count = getLocalStorage('count') || 0;
+var lock = null;
 
-
+$('.img-captcha').find('img').on('click', function() {
+    imgCaptcha();
+})
 
 function login(x, y) {
     $.ajax({
@@ -15,7 +18,7 @@ function login(x, y) {
         dataType: 'json',
         success: function(response) {
             var tok = response.token;
-            var status = response.status;
+            // var status = response.status;
             localStorage.setItem('myCat', tok);
             window.location.href = "./secondpage.html";
             // if (status == 0) {
@@ -62,7 +65,11 @@ $(document).ready(function() {
             if (count >= 2) {
                 imgCaptcha();
             }
-            login(id, password);
+            if (lock) {
+                alert('请输入正确验证码')
+            } else {
+                login(id, password);
+            }
         })
     })
     // TODO 验证码改成小写
