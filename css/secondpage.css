@@ -15,8 +15,8 @@ header .navbar .navbar-header button {
 }
 
 header .navbar .navbar-header a img {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 }
 
 header .navbar .navbar-header button,
@@ -59,6 +59,10 @@ header .navbar-default .navbar-nav>li>a {
 
 header .navbar-default .navbar-nav>li>a>span {
     margin-left: 10px;
+}
+
+header .navbar .navbar-collapse {
+    border-color: #fff;
 }
 
 
