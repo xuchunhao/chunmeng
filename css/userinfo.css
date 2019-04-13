@@ -1,0 +1,71 @@
+/* 左栏 */
+
+dl dt,
+dl dd {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+}
+
+dl dt {
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+dl dd {
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+dl dd:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-right: 2px solid #2d8cf0;
+}
+
+dl dd.active {
+    border-right: 2px solid #2d8cf0;
+}
+
+
+/* 左栏 */
+
+
+/* 右栏 */
+
+.right-content>div {
+    display: none;
+}
+
+.right-content>div.show {
+    display: block;
+}
+
+
+/* 头像设置 */
+
+.right-content .info-portrait .portrait-select {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.right-content .info-portrait .portrait-select .portrait-basic {
+    width: 200px;
+    height: 200px;
+}
+
+.right-content .info-portrait #portrait-input {
+    display: none;
+}
+
+.right-content .info-portrait .portrait-example {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* 头像设置 */
+
+
+/* 右栏 */

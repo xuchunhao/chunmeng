@@ -19,7 +19,7 @@ function login(x, y) {
         success: function(response) {
             var tok = response.token;
             // var status = response.status;
-            localStorage.setItem('myCat', tok);
+            localStorage.setItem('tok', tok);
             window.location.href = "./secondpage.html";
             // if (status == 0) {
             //     $.ajax({

@@ -1,5 +1,5 @@
 * {
-    font-family: Arial, Monospace, Helvetica, sans-serif;
+    font-family: "微软雅黑", Arial, Monospace, Helvetica, sans-serif;
     list-style: none;
     text-decoration: none;
 }
@@ -71,6 +71,14 @@ header .navbar-default .navbar-nav>li>a {
 
 header .navbar-default .navbar-nav>li>a>span {
     margin-left: 10px;
+}
+
+.index-change {
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 15px;
+    font-family: "Microsoft Yahei", Arial
 }
 
 

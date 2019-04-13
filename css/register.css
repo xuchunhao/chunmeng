@@ -92,7 +92,7 @@ header .navbar .navbar-collapse {
     border: 1px solid #ddd;
 }
 
-.form form div input::placeholder {
+.form form div input {
     padding-left: 10px;
 }
 

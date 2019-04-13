@@ -57,6 +57,8 @@
 </head>
 
 <body>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/indexCheckToken.js"></script>
     <script src="./js/iconfont.js"></script>
     <header>
         <nav class="navbar navbar-default">
@@ -141,7 +143,7 @@
             <div class="row">
                 <section class="four-rows text-center">
                     <div class="col-lg-3 col-md-6 col-sm-12 deep-purple">
-                        <div class="row1">
+                        <div class="row1 block">
                             <svg class="iconbig icon" aria-hidden="true">
                             <use xlink:href="#icon-shuju"></use>
                         </svg>
@@ -150,7 +152,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 light-purple">
-                        <div class="row2">
+                        <div class="row2 block">
                             <svg class="iconbig icon" aria-hidden="true">
                             <use xlink:href="#icon-shuju1"></use>
                         </svg>
@@ -159,7 +161,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 deep-green">
-                        <div class="row3">
+                        <div class="row3 block">
                             <svg class="iconbig icon" aria-hidden="true">
                             <use xlink:href="#icon-shejiao"></use>
                         </svg>
@@ -168,7 +170,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12 light-blue">
-                        <div class="row4">
+                        <div class="row4 block">
                             <svg class="iconbig icon" aria-hidden="true">
                             <use xlink:href="#icon-laba"></use>
                         </svg>
@@ -181,11 +183,11 @@
         </div>
         <section class="about text-center">
             <div class="container">
-                <div class="wow">
+                <div class="wow block">
                     <h1>项目简介</h1>
                     <p>“校园自主与互助服务平台”是由浙江科技学院蓝色空间「码三秃」团队主持开发并运维的一项面向校园师生的开放型平台， 该项目目前正在参加校春萌项目</p>
                 </div>
-                <div class="row">
+                <div class="row block" data-move-y="200px">
                     <div class="col-md-4">
                         <svg class="icon iconyellow iconlarge" aria-hidden="true">
                             <use xlink:href="#icon-sudu"></use>
@@ -212,8 +214,8 @@
         </section>
         <section class="finally">
             <div class="container">
-                <h1>项目特色</h1>
-                <div class="row">
+                <h1 class="block">项目特色</h1>
+                <div class="row block" data-move-x="-200px">
                     <div class="col-lg-6 col-xl-5 row-img row-img1">
                         <img src="./img/pic1.png" alt="">
                     </div>
@@ -251,7 +253,7 @@
                     </div>
                 </div>
                 <hr>
-                <div class="row add-padding">
+                <div class="row add-padding block" data-move-x="200px">
                     <div class="col-lg-6 col-xl-7">
                         <div class="row">
                             <div class="col-md-1">
@@ -292,9 +294,15 @@
 
         </div>
     </footer>
-    <script src="./js/jquery-2.1.4.min.js"></script>
     <script src="./js/localStorage.js"></script>
     <script src="./js/bootstrap-3.min.js"></script>
+    <script src="./js/jquery.smoove.js"></script>
+    <script>
+        $('.block').smoove({
+            offset: '15%',
+            opacity: 0
+        });
+    </script>
     <script src="./js/index.js"></script>
 </body>
 

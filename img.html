@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #my-img {
+            text-align: center;
+        }
+        
+        #img-upload {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <input type="file" id="img-upload">
+    <div id="my-img">123</div>
+    <img src="" alt="">
+    <script>
+        $(document).ready(function() {
+            $('#my-img').click(function() {
+                $('#img-upload').click();
+            });
+        });
+        $('#file').on('change', function() {
+                var xxx = document.getElementById('file').value;
+                var f = document.getElementById('file').files[0];
+                var imgKind = xxx.substring((f.type.lastIndexOf(".")) + 1);
+                var reader = new FileReader();
+                var obj = reader.readAsDataURL(f);
+                reader.onload = function(e) {
+                    // e.target.result就是该文件的完整Base64 Data-URI
+                    var imgBase64 = e.target.result;
+                    $.ajax({
+                        type: "POST",
+                        url: "/api/external/portrait",
+                        contentType: 'application/json',
+                        data: JSON.stringify({
+                            id: 1,
+                            type: "portrait",
+                            subtype: "upload",
+                            status: 0,
+                            data: {
+                                id: "1180310086",
+                                name: "王凌超",
+                                base64: imgBase64,
+                                type: imgKind
+                            }
+
+                        }),
+                        success: function(response) {
+                            var responseObj = $.parseJSON(response);
+                            console.log(responseObj.data.url);
+                            var url = responseObj.data.url;
+                            $('img').attr('src', url);
+                        },
+                        error: function(error) {
+                            console.log(error.status, error.statusText);
+                        }
+                    })
+                };
+
+                // console.log(obj);
+                // var str = window.btoa(obj);
+                // var xxx = window.atob(str);
+                // console.log(str, xxx);
+            })
+            // var fileInput = document.querySelector('#file');
+            // fileInput.onchange = function() {
+            //     var filereader = new FileReader();
+            //     var fileType = this.files[0].type;
+            //     filereader.onload = function() {
+            //         if (/^image\[jpeg|png|gif]/.test(fileType)) {
+            //             console.log(this.result);
+            //         }
+            //     }
+            //     console.log(this.files[0]);
+            //     console.log(filereader.readAsDataURL(this.files[0]));
+            // }
+            // console.dir(fileInput);
+    </script>
+</body>
+
+</html>

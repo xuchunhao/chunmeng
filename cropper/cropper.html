@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/cropper.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/cropper.js"></script>
+    <div class="croper-box">
+        <img src="./rabbit.jpg" class="wait-crop">
+        <!-- <div class="btn">确定</div> -->
+        <div class="rotate_l">左旋</div>
+        <div class="rotate_r">右旋</div>
+        <img class="imgcut" src="" alt="" style="width:128px;heght:128px">
+    </div>
+    <script>
+        $('.wait-crop').cropper({
+            aspectRatio: 1 / 1,
+            autoCropArea: .9
+                // crop: function(data) {
+                //     console.log(data);
+                //}
+        });
+        $('.wait-crop').on( //'mouseup', function() {
+            //     console.log(111);
+            //     var cropCanvas = $('.wait-crop').cropper('getCroppedCanvas');
+            //     var cropUrl = cropCanvas.toDataURL('image/jpeg', 0.4);
+            //     $('.imgcut').attr("src", cropUrl);
+            // 'ready',
+            // function(e) {
+            //     console.log(e.type);
+            // },
+            // 'cropstart',
+            // function(e) {
+            //     console.log(e.type, e.action);
+            // },
+            // 'cropmove',
+            // function(e) {
+            //     console.log(e.type, e.action);
+            // },
+            'cropend',
+            function(e) {
+                console.log(e.type, e.action);
+                var cropCanvas = $('.wait-crop').cropper('getCroppedCanvas');
+                var cropUrl = cropCanvas.toDataURL('image/jpeg', 0.4);
+                $('.imgcut').attr("src", cropUrl);
+            }
+            // 'crop',
+            // function(e) {
+            //     console.log(e.type, e.x, e.y, e.width, e.height, e.rotate, e.scaleX, e.scaleY);
+            // },
+            // , 'zoomend',
+            // function(e) {
+            //     console.log(e.type, e.ratio);
+            //     var cropCanvas = $('.wait-crop').cropper('getCroppedCanvas');
+            //     var cropUrl = cropCanvas.toDataURL('image/jpeg', 0.4);
+            //     $('.imgcut').attr("src", cropUrl);
+            // }
+
+            // "dragmove.cropper",
+            // function(e) {
+            //     console.log(111);
+            //     console.log(e.type);
+            // }
+        )
+
+        $('.rotate_l').click(function() {
+            $('.wait-crop').cropper('rotate', -90);
+        })
+
+        $('.rotate_r').click(function() {
+            $('.wait-crop').cropper('rotate', 90);
+        })
+
+        // 你可能用到base64转blob对象
+        // function dataURItoBlob(base64Data) {
+        //     var byteString;
+        //     if (base64Data.split(',')[0].indexOf('base64') >= 0)
+        //         byteString = atob(base64Data.split(',')[1]);
+        //     else
+        //         byteString = unescape(base64Data.split(',')[1]);
+        //     var mimeString = base64Data.split(',')[0].split(':')[1].split(';')[0];
+        //     var ia = new Uint8Array(byteString.length);
+        //     for (var i = 0; i < byteString.length; i++) {
+        //         ia[i] = byteString.charCodeAt(i);
+        //     }
+        //     return new Blob([ia], {
+        //         type: mimeString
+        //     });
+        // }
+    </script>
+</body>
+
+</html>

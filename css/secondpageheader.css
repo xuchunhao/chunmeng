@@ -15,8 +15,9 @@ header .navbar .navbar-header button {
 }
 
 header .navbar .navbar-header a img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    margin-top: -10px;
 }
 
 header .navbar .navbar-header button,
@@ -52,6 +53,10 @@ header .navbar-default .navbar-nav>li>a:hover {
     border-bottom: 2px solid #2d8cf0;
 }
 
+header .navbar-default .navbar-nav>li>.head-a:hover {
+    border-bottom: none;
+}
+
 header .navbar-default .navbar-nav>li>a {
     color: #000;
     margin-right: 30px;
@@ -59,6 +64,10 @@ header .navbar-default .navbar-nav>li>a {
 
 header .navbar-default .navbar-nav>li>a>span {
     margin-left: 10px;
+}
+
+header .navbar-default .navbar-nav>li img {
+    margin-top: -10px;
 }
 
 header .navbar .navbar-collapse {
