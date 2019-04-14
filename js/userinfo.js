@@ -79,8 +79,8 @@ $('.portrait-btn').click(function(e) {
             subtype: "upload",
             status: 0,
             data: {
-                id: "1180230024",
-                name: "许淳皓",
+                id: personObj.id,
+                name: personObj.name,
                 base64: newimgBase64,
                 type: "png"
                     // imgKind
