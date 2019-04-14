@@ -13,6 +13,8 @@
 </head>
 
 <body>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/checkToken.js"></script>
     <header>
         <nav class="navbar navbar-default">
             <div class="container">
@@ -60,7 +62,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="head-a">
-                                <img class="portrait-index" src="./img/default.jpg" alt="" style="width:40px;height:40px">
+                                <img class="portrait-index" src="" alt="" style="width:40px;height:40px">
                             </a>
                         </li>
                         <li class="dropdown">
@@ -101,13 +103,17 @@
                     <div class="info-portrait">
                         <div class="portrait-select">
                             <img src="" alt="" class="portrait-basic">
-                            <span>选择头像</span>
+                            <p>选择头像</p>
                         </div>
-                        <input type="file" id="portrait-input">
                         <img src="" alt="" class="portrait-example">
+                        <input type="file" id="portrait-input">
+                        <a class="btn btn-default portrait-btn" href="javascript:;" role="button">
+                            <span class="glyphicon glyphicon-repeat"></span> 重新选择
+                        </a>
                         <a class="btn btn-default rotate_l" href="javascript:;" role="button">左转</a>
                         <a class="btn btn-default rotate_r" href="javascript:;" role="button">右转</a>
-                        <a class="btn btn-default portrait-btn" href="javascript:;" role="button">提交</a>
+                        <a class="btn btn-default " href="javascript:;" role="button">提交</a>
+                        <button class="btn btn-default portrait-btn" type="submit">Button</button>
                     </div>
                     <div class="info-all">info-all</div>
                     <div class="msg-lost">msg-lost</div>
@@ -120,9 +126,9 @@
             </div>
         </div>
     </div>
+    <script src="./js/getPortrait.js"></script>
     <script src="./js/getBase64.js"></script>
     <script src="./js/iconfont.js"></script>
-    <script src="./js/jquery-2.1.4.min.js"></script>
     <script src="./js/bootstrap-3.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/cropper.js"></script>
