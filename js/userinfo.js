@@ -11,9 +11,14 @@ $('dd').click(function() {
 $('.portrait-select').one("click", function(e) {
     $('#portrait-input').click();
 });
-// });
+$('.portrait-repeat').on("click", function() {
+        $('#portrait-input').click();
+    })
+    // });
 var imgBase64 = "";
+var filePortrait = 0;
 $('#portrait-input').on('change', function() {
+    //改这的xxx
     var xxx = document.getElementById('portrait-input').value;
     var f = document.getElementById('portrait-input').files[0];
     imgKind = xxx.substring((f.type.lastIndexOf(".")) + 1);
@@ -22,14 +27,32 @@ $('#portrait-input').on('change', function() {
     reader.onload = function(e) {
         // e.target.result就是该文件的完整Base64 Data-URI
         imgBase64 = e.target.result;
-        $('.portrait-basic').attr('src', imgBase64)
-            .cropper({
-                aspectRatio: 1 / 1,
-                autoCropArea: .9
-                    // crop: function(data) {
-                    //     console.log(data);
-                    //}
-            });
+        if (filePortrait == 0) {
+            $('.portrait-basic').attr('src', imgBase64)
+                .cropper({
+                    aspectRatio: 1 / 1,
+                    autoCropArea: .9
+                        // crop: function(data) {
+                        //     console.log(data);
+                        //}
+                });
+            filePortrait++;
+        } else if (filePortrait > 0) {
+            $('.portrait-basic').attr('src', imgBase64)
+            $('.cropper-canvas img').attr('src', imgBase64);
+            // .cropper({
+            //     aspectRatio: 1 / 1,
+            //     autoCropArea: .9
+            //         // crop: function(data) {
+            //         //     console.log(data);
+            //         //}
+            // });
+            $('.cropper-view-box img').attr('src', imgBase64);
+            // var cropCanvas = $('.cropper-canvas img').cropper('getCroppedCanvas');
+            // var cropUrl = cropCanvas.toDataURL('image/jpeg', 0.4);
+            // console.log(cropCanvas, cropUrl);
+            // $('.portrait-example').attr("src", cropUrl);
+        }
     }
 })
 
@@ -46,7 +69,7 @@ $('.portrait-basic').on(
     //     var cropUrl = cropCanvas.toDataURL('image/jpeg', 0.4);
     //     $('.portrait-example').attr("src", cropUrl);
     // },
-    'cropstart cropmove cropend ready',
+    'cropstart cropmove cropend ready crop zoomend',
     function(e) {
         var cropCanvas = $('.portrait-basic').cropper('getCroppedCanvas');
         var cropUrl = cropCanvas.toDataURL('image/jpeg', 0.4);
@@ -89,9 +112,7 @@ $('.portrait-btn').click(function(e) {
         success: function(response) {
             var responseObj = $.parseJSON(response);
             var portraitURL = responseObj.data.url;
-            console.log(portraitURL);
             $('.portrait-index').attr('src', portraitURL);
-            console.log(222);
             window.location.href = "./userinfo.html";
         },
         error: function(error) {

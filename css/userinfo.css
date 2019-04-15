@@ -41,6 +41,25 @@ dl dd.active {
 }
 
 
+/* 基本信息栏 */
+
+.right-content .info-basic {
+    padding: 50px;
+}
+
+.right-content div form div {
+    padding: 20px;
+}
+
+.right-content div form div input {
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+
+/* 基本信息栏 */
+
+
 /* 头像设置 */
 
 .right-content .info-portrait {

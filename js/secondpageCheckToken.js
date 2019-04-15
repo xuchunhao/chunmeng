@@ -13,17 +13,17 @@ if (token) {
         success: function(res) {
             personObj = res.info;
             personID = personObj.id;
-            window.location.href = "./secondpage.html"
-                // var id = res.info.id;
-                // window.location.href = "./secondpage.html";
-                // localStorage.setItem('myCat', id)
-                // window.location.href = "./secondpage.html?txt=" + id;
+            // var id = res.info.id;
+            // window.location.href = "./secondpage.html";
+            // localStorage.setItem('myCat', id)
+            // window.location.href = "./secondpage.html?txt=" + id;
         },
         error: function() {
             window.location.href = "./login.html";
         }
     }).then(function() {
         $(".portrait-index").attr('src', "./api/external/get/portrait/" + personID);
+        userinfoBasic();
     })
 } else if (!token) {
     window.location.href = "./login.html";
