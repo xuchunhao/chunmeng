@@ -47,7 +47,15 @@ $('#portrait-input').on('change', function() {
             //         //     console.log(data);
             //         //}
             // });
-            $('.cropper-view-box img').attr('src', imgBase64);
+            // $('.cropper-view-box img').attr('src', imgBase64);
+            // var sr = $('.cropper-canvas img').attr("src");
+            // var img = new Image();
+            // console.log(sr, img)
+            // img.src = sr;
+            // console.log(img)
+            // var newimgBase64 = getBase64Image(img);
+            // console.log(newimgBase64);
+            // $('.portrait-example').attr("src", sr)
             // var cropCanvas = $('.cropper-canvas img').cropper('getCroppedCanvas');
             // var cropUrl = cropCanvas.toDataURL('image/jpeg', 0.4);
             // console.log(cropCanvas, cropUrl);
