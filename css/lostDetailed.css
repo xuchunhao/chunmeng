@@ -1,0 +1,30 @@
+body,
+html {
+    height: 100%;
+}
+
+.lost-detailed {
+    height: 80%;
+}
+
+.lost-detailed>div {
+    height: 100%;
+}
+
+.lost-detailed>div .lost-detailed-content {
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .28);
+    padding: 10px 30px;
+}
+
+.lost-detailed>div .lost-detailed-content img {
+    width: 160px;
+    height: 190px;
+}
+
+
+/* .lost-detailed>div .lost-detailed-content div span {
+    margin-left: 500px;
+} */

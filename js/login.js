@@ -17,7 +17,7 @@ function login(x, y) {
         }),
         dataType: 'json',
         success: function(response) {
-            var tok = response.token;
+            var tok = response.data.token;
             // var status = response.status;
             localStorage.setItem('tok', tok);
             window.location.href = "./secondpage.html";
@@ -41,10 +41,8 @@ function login(x, y) {
         },
         error: function(response) {
             var responseObj = response.responseJSON;
-            var status = $.parseJSON(responseObj.status);
-            if (status == -1) {
-                alert("未知错误");
-            } else if (status == 1) {
+            var status = responseObj.status;
+            if (status == "error_credential_or_password_incorrect") {
                 alert("账号或密码错误");
                 count++;
                 setLocalStorage('count', count);

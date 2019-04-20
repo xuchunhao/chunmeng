@@ -10,7 +10,7 @@ if (token) {
         },
         dataType: 'json',
         success: function(res) {
-            personObj = res.info;
+            personObj = res.data;
             // var id = res.info.id;
             // window.location.href = "./secondpage.html";
             // localStorage.setItem('myCat', id)

@@ -3,13 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/bootstrap-3.min.css">
     <link rel="stylesheet" href="./css/cropper.css">
     <link rel="stylesheet" href="./css/secondpageheader.css">
     <link rel="stylesheet" href="./css/userinfo.css">
+    <style>
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus {
+            outline: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -104,7 +114,11 @@
                             <form action="">
                                 <div>
                                     <label for="info-basic-id">学号</label>
-                                    <input type="text" id="info-basic-id">
+                                    <input type="text" id="info-basic-id" disabled>
+                                </div>
+                                <div>
+                                    <label for="info-basic-phone">手机</label>
+                                    <input type="text" id="info-basic-phone" disabled>
                                 </div>
                                 <div>
                                     <label for="info-basic-">姓名</label>
@@ -115,14 +129,23 @@
                                     <input type="text" id="info-basic-nickname">
                                 </div>
                                 <div>
-                                    <label for="info-basic-phone">手机</label>
-                                    <input type="text" id="info-basic-phone">
-                                </div>
-                                <div>
                                     <label for="info-basic-email">邮箱</label>
                                     <input type="text" id="info-basic-email">
                                 </div>
                             </form>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="background-color:#2d8cf0;border:none">
+                                    更改信息
+                                </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content text-center" style="padding:80px 0 30px;margin-top: 50%">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal" style="margin-right:50px">取消</button>
+                                        <button type="button" class="btn btn-primary change-info-basic-btn">确定</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="info-portrait">
@@ -137,8 +160,7 @@
                         </a>
                         <a class="btn btn-default rotate_l" href="javascript:;" role="button">左转</a>
                         <a class="btn btn-default rotate_r" href="javascript:;" role="button">右转</a>
-                        <a class="btn btn-default " href="javascript:;" role="button">提交</a>
-                        <button class="btn btn-default portrait-btn" type="submit">Button</button>
+                        <a class="btn btn-default portrait-btn" href="javascript:;" role="button">提交</a>
                     </div>
                     <div class="info-all">info-all</div>
                     <div class="msg-lost">msg-lost</div>
@@ -156,7 +178,7 @@
     <script src="./js/getBase64.js"></script>
     <script src="./js/iconfont.js"></script>
     <script src="./js/bootstrap-3.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/changeUserinfoBasic.js"></script>
     <script src="./js/cropper.js"></script>
     <script src="./js/userinfo.js"></script>
 </body>

@@ -80,7 +80,7 @@ function registerBtn() {
                 console.log(response);
                 var status = response.status;
                 // console.log(response, status, responseObj);
-                if (status == 0) {
+                if (status == "success") {
                     alert('注册成功');
 
 
@@ -94,7 +94,7 @@ function registerBtn() {
                         }),
                         dataType: 'json',
                         success: function(response) {
-                            var tok = response.token;
+                            var tok = response.data.token;
                             // var status = response.status;
                             localStorage.setItem('tok', tok);
                             window.location.href = "./secondpage.html";
@@ -117,15 +117,15 @@ function registerBtn() {
                             // }
                         },
                         error: function(response) {
-                            var responseObj = response.responseJSON;
-                            var status = $.parseJSON(responseObj.status);
-                            if (status == -1) {
-                                alert("未知错误");
-                            } else if (status == 1) {
-                                alert("账号或密码错误");
-                                count++;
-                                setLocalStorage('count', count);
-                            }
+                            // var responseObj = response.responseJSON;
+                            // var status = $.parseJSON(responseObj.status);
+                            // if (status == -1) {
+                            //     alert("未知错误");
+                            // } else if (status == 1) {
+                            //     alert("账号或密码错误");
+                            //     count++;
+                            //     setLocalStorage('count', count);
+                            // }
                         }
                     })
 
@@ -136,13 +136,27 @@ function registerBtn() {
             },
             error: function(error) {
                 var responseObj = error.responseJSON;
-                var status = $.parseJSON(responseObj.status);
-                if (status == 1) {
-                    alert('学号已注册');
-                } else if (status == 2) {
-                    alert('图片验证码错误');
-                } else if (status == 3) {
-                    alert('短信验证码错误');
+                var status = responseObj.status;
+                // if (status == 1) {
+                //     alert('学号已注册');
+                // } else if (status == 2) {
+                //     alert('图片验证码错误');
+                // } else if (status == 3) {
+                //     alert('短信验证码错误');
+                // }
+                switch (status) {
+                    case "error_id_existed":
+                        alert('学号或者手机已被注册');
+                        break;
+                    case "error_invalid_image_captcha":
+                        alert('图片验证码不正确');
+                        break;
+                    case "error_invalid_sms_captcha":
+                        alert('短信验证码不正确');
+                        break;
+                    case "error_id_name_not_matches":
+                        alert('	学号和名字不匹配');
+                        break;
                 }
             }
         })

@@ -56,6 +56,11 @@ dl dd.active {
     border: 1px solid #ddd;
 }
 
+.right-content .info-basic .change-info-basic-btn {
+    background-color: #2d8cf0;
+    border: none;
+}
+
 
 /* 基本信息栏 */
 

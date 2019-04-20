@@ -1,0 +1,51 @@
+/* 内容区 */
+
+
+/* 失物招领 */
+
+.info-delivery-content div .lost .lost-tab-group span {
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 16px;
+}
+
+.info-delivery-content div .lost .lost-tab-group span.active {
+    background-color: #2d8cf0;
+    color: #fff;
+}
+
+.info-delivery-content div .lost .lost-content {
+    padding: 20px 0;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.info-delivery-content div .lost .lost-content>div {
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding: 20px;
+}
+
+.info-delivery-content div .lost .lost-content>div:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #ccc;
+}
+
+.info-delivery-content div .lost .lost-content>div img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border: 1px solid black;
+}
+
+.info-delivery-content div .lost .lost-content>div div {
+    padding-left: 100px;
+}
+
+
+/* 失物招领 */
+
+
+/* 内容区 */

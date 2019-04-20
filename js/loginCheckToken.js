@@ -11,7 +11,7 @@ if (token) {
         },
         dataType: 'json',
         success: function(res) {
-            personObj = res.info;
+            personObj = res.data;
             personID = personObj.id;
             window.location.href = "./secondpage.html";
             // var id = res.info.id;
