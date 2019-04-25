@@ -44,6 +44,10 @@
     padding-left: 100px;
 }
 
+.info-delivery-content div .lost .lost-content .lost-content-group-tpl {
+    display: none;
+}
+
 
 /* 失物招领 */
 

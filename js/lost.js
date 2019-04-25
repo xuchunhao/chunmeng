@@ -16,14 +16,20 @@ $.ajax({
         lostArr.forEach(function(ele, index) {
             var oCloneDom = $('.lost-content-group-tpl').clone().removeClass('lost-content-group-tpl').addClass('lost-content-group');
             // div jquery cache
-            oCloneDom.find('div').find('p')
-                .text("姓名:" + ele.loser_name)
+            var contact = "";
+            if (ele.loser_phone) {
+                contact = ele.loser_phone;
+            } else if (ele.loser_qq) {
+                contact = ele.loser_qq;
+            }
+            oCloneDom.find('div').find('h3')
+                .text("【失物招领】" + ele.title)
                 .next()
-                .text("联系方式:" + ele.loser_phone)
+                .text("详情介绍:" + ele.content)
                 .next()
-                .text("丢失物介绍:" + ele.lab)
+                .text("丢失者姓名 :" + ele.loser_name)
                 .next()
-                .text("备注:" + ele.title);
+                .text("联系方式:" + contact);
 
             oCloneDom.appendTo($('.lost-content'));
         });
