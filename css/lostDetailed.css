@@ -24,6 +24,19 @@ html {
     height: 190px;
 }
 
+.lost-detailed>div .lost-detailed-content .lost-detailed-form {
+    padding: 50px;
+}
+
+.lost-detailed>div .lost-detailed-content .lost-detailed-form div {
+    padding: 20px;
+}
+
+.lost-detailed>div .lost-detailed-content .lost-detailed-form div label {
+    width: 100px;
+    text-align: right;
+}
+
 
 /* .lost-detailed>div .lost-detailed-content div span {
     margin-left: 500px;

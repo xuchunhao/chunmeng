@@ -1,33 +1,34 @@
 function bindLostContentGroupBtn() {
     $('.lost-content-group').click(function() {
-        window.location.href = "./lostDetailed.html"
+        window.open("./lostDetailed.html", "_blank");
     })
 }
 
 $.ajax({
     type: "GET",
-    url: "/api/external/get/property/find?token=9763393e42ef2b8f051caefbec8a522f31a38663a7180d69d1a9cb1addaa76ac", //+ token,
+    url: "api/external/get/property?token=" + token + "&type=1",
     contentType: 'application/json',
     // data: JSON.stringify({
 
     // }),
     success: function(response) {
         var lostArr = $.parseJSON(response).data;
+        var lostID = lostArr[0].id;
+        localStorage.setItem('lostID', lostID);
         lostArr.forEach(function(ele, index) {
             var oCloneDom = $('.lost-content-group-tpl').clone().removeClass('lost-content-group-tpl').addClass('lost-content-group');
-            // div jquery cache
             var contact = "";
-            if (ele.loser_phone) {
-                contact = ele.loser_phone;
-            } else if (ele.loser_qq) {
-                contact = ele.loser_qq;
+            if (ele.user_phone) {
+                contact = "【手机】" + ele.user_phone;
+            } else if (ele.user_qq) {
+                contact = "【QQ】" + ele.user_qq;
             }
             oCloneDom.find('div').find('h3')
                 .text("【失物招领】" + ele.title)
                 .next()
                 .text("详情介绍:" + ele.content)
                 .next()
-                .text("丢失者姓名 :" + ele.loser_name)
+                .text("丢失者姓名 :" + ele.user_name)
                 .next()
                 .text("联系方式:" + contact);
 

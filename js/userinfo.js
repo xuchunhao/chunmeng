@@ -12,7 +12,22 @@ $('.portrait-select').one("click", function(e) {
     $('#portrait-input').click();
 });
 $('.portrait-repeat').on("click", function() {
-        $('#portrait-input').click();
+        // $('#portrait-input').click();
+        var xxx = document.getElementById('portrait-input').value;
+        var f = document.getElementById('portrait-input').files[0];
+        imgKind = xxx.substring((f.type.lastIndexOf(".")) + 1);
+        var reader = new FileReader();
+        var obj = reader.readAsDataURL(f);
+        reader.onload = function(e) {
+            // e.target.result就是该文件的完整Base64 Data-URI
+            imgBase64 = e.target.result;
+
+            var sr = $('.portrait-basic').attr("src");
+            var img = new Image();
+            img.src = sr;
+            $('.portrait-basic').replace();
+
+        }
     })
     // });
 var imgBase64 = "";

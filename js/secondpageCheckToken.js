@@ -23,6 +23,7 @@ if (token) {
         }
     }).then(function() {
         $(".portrait-index").attr('src', "./api/external/get/portrait/" + personID);
+        console.log(personObj)
         userinfoBasic();
     })
 } else if (!token) {
