@@ -27,7 +27,7 @@
 
 //    oCloneDom.insertBefore($('.show'));              
 // });
-var lostID = localStorage.getItem('lostID', lostID);;
+var lostID = localStorage.setItem('lostID', lostID);;
 
 $.ajax({
     type: "GET",

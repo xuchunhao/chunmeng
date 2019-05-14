@@ -37,6 +37,10 @@ html {
     text-align: right;
 }
 
+.lost-detailed>div .lost-detailed-content .lost-detailed-form div input {
+    border: 1px solid #ccc;
+}
+
 
 /* .lost-detailed>div .lost-detailed-content div span {
     margin-left: 500px;
