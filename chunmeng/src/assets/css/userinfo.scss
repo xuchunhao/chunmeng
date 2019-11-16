@@ -1,0 +1,39 @@
+.userinfo {
+	.userinfo-content {
+		.userinfo-menu {
+			ul {
+				li {
+					div {
+            &.is-active,
+                  &:hover{
+                    background-color: rgba(0, 0, 0, 0.1);
+                    border-right: 2px solid #2d8cf0;
+                    color: #000;
+                  }
+						span {
+              font-weight: bold;
+              font-size: 16px;
+						}
+          }
+          
+          ul{
+            li{
+              ul{
+                li{
+                  font-size: 16px;
+                  padding-left: 70px;
+                  &.is-active,
+                  &:hover{
+                    background-color: rgba(0, 0, 0, 0.1);
+                    border-right: 2px solid #2d8cf0;
+                    color: #000;
+                  }
+                }
+              }
+            }
+          }
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,76 @@
+.find {
+	.tag {
+		margin-top: 20px;
+		span {
+			cursor: pointer;
+			background-color: #fff;
+			border: 1px solid #b3d8ff;
+			color: #409eff;
+			font-size: 16px;
+			border-radius: 16px;
+			padding: .2em .6em .3em;
+			font-weight: 600;
+			margin-right: 20px;
+
+			&.active {
+				border: 1px solid #2d8cf0;
+				background-color: #2d8cf0;
+				color: #fff;
+			}
+		}
+	}
+
+	button {
+		border-color: #2d8cf0;
+		color: #2d8cf0;
+		background-color: #ecf5ff;
+		&:hover {
+			background-color: #2d8cf0;
+			color: #fff;
+			border-color: #2d8cf0;
+		}
+		&:focus {
+			background-color: #2d8cf0;
+			color: #fff;
+			border-color: #2d8cf0;
+		}
+	}
+
+	.find-content {
+		padding: 20px 0;
+		margin-top: 10px;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		.find-content-group-tpl {
+			border-bottom: 1px solid #ccc;
+			position: relative;
+			padding: 20px;
+
+			&:hover {
+				cursor: pointer;
+				box-shadow: 1px 1px 10px #ccc;
+			}
+			div {
+				padding-left: 100px;
+				h3 {
+					margin-top: 20px;
+					margin-bottom: 10px;
+					font-weight: 500;
+					font-size: 34;
+				}
+
+				p {
+					margin: 0 0 10px;
+					font-size: 14px;
+				}
+			}
+
+			img {
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				border: 1px solid black;
+			}
+		}
+	}
+}

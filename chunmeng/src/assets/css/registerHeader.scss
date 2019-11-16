@@ -1,0 +1,34 @@
+.register-header{
+  .register-header-content{
+    padding: 15px 0;
+    .register-header-logo{
+      img{
+        width: 40px;
+        height: 40px;
+      }
+
+    }
+    .register-header-btn{
+      button{
+        border: none;
+        color: #000;
+        border-radius: 4px;
+        font-size: 14px;
+        padding: 15px 20px;
+
+        &:hover{
+          background: rgba(200,200,200, 0.2);
+        }
+        
+        i{
+          font-size: 20px;
+          vertical-align: -2px;
+        }
+
+        .m-l{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

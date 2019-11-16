@@ -1,0 +1,36 @@
+.second-page-header{
+  margin: 10px 0 30px;
+  
+  .el-submenu__title{
+    border-bottom-color: transparent !important;
+  }
+
+  
+  .second-page-menu-left{
+
+    .register-header-logo{
+      width: 50px;
+      height: 50px;
+    }
+
+    li{
+      &.is-active{
+        color: #2d8cf0;
+        border-bottom: 2px solid #2d8cf0;;
+      }
+    }
+  }
+
+  .second-page-menu-right{
+    .register-header-logo{
+      width: 40px;
+      height: 40px;
+    }
+    
+    li{
+      &.is-active{
+      border-bottom-color: transparent;
+      }
+    }
+  }
+}
