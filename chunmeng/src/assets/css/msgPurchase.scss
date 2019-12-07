@@ -1,0 +1,47 @@
+.msg-purchase{
+  padding: 20px;
+
+  .purchase-content {
+    padding: 20px 0;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    .purchase-content-group-tpl {
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      padding: 10px;
+  
+      &:hover {
+        cursor: pointer;
+        box-shadow: 1px 1px 10px #ccc;
+      }
+      div {
+        padding-left: 10px;
+        h3 {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-weight: 500;
+          font-size: 34;
+        }
+  
+        p {
+          margin: 0 0 10px;
+          font-size: 14px;
+          .finish{
+            color: #67C23A;
+          }
+          .paying{
+            color: #F56C6C;
+          }
+        }
+      }
+  
+      // img {
+      //   width: 80px;
+      //   height: 80px;
+      //   position: absolute;
+      //   border: 1px solid black;
+      // }
+    }
+  }
+}

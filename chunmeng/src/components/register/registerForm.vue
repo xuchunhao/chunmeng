@@ -135,9 +135,9 @@ export default {
               .then(
                 res => {
                   if (res.data.status == "success") {
-                    cookieFunction.setCookie("token", res.data.data.token, 30);
+                    cookieFunction.setCookie("token", res.data.data.token, 10);
                     this.$message.success("欢迎您");
-                    this.$router.push({ path: "/secondPageIndex" });
+                    this.$router.push({ path: "/lost" });
                   } else {
                     this.$message.error("注册失败");
                   }

@@ -73,6 +73,26 @@ const router = new Router({
         component: () => import('@/components/secondPage/find/findSubmit')
       },
       {
+        path: '/shop',
+        name: 'shop',
+        component: () => import('@/components/secondPage/shop/shop')
+      },
+      {
+        path: '/shopSubmit',
+        name: 'shopSubmit',
+        component: () => import('@/components/secondPage/shop/shopSubmit')
+      },
+      {
+        path: '/productSubmit',
+        name: 'productSubmit',
+        component: () => import('@/components/secondPage/shop/productSubmit')
+      },
+      {
+        path: '/purchase',
+        name: 'purchase',
+        component: () => import('@/components/secondPage/shop/purchase')
+      },
+      {
         path:'/:findname',
         name:'findDetailed',
         component:() => import('@/components/secondPage/find/findDetailed'),
@@ -82,7 +102,16 @@ const router = new Router({
         name:'lostDetailed',
         component:() => import('@/components/secondPage/lost/lostDetailed'),
       },
-
+      {
+        path:'/:shopname',
+        name:'shopDetailed',
+        component:() => import('@/components/secondPage/shop/shopDetailed'),
+      },
+      {
+        path:'/:productname',
+        name:'productDetailed',
+        component:() => import('@/components/secondPage/shop/productDetailed'),
+      },
       // {
       //   path:'/s/:name',
       //   name:'article',

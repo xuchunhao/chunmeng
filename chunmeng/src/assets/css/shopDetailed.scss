@@ -1,0 +1,43 @@
+.shop-detailed {
+	.buttons {
+		button {
+			margin-bottom: 15px;
+			border-color: #2d8cf0;
+			color: #2d8cf0;
+			background-color: #ecf5ff;
+			&:hover {
+				background-color: #2d8cf0;
+				color: #fff;
+				border-color: #2d8cf0;
+			}
+			&:focus {
+				background-color: #2d8cf0;
+				color: #fff;
+				border-color: #2d8cf0;
+			}
+		}
+	}
+	.product-box {
+		border-radius: 10px;
+		padding: 10px;
+		background-color: rgb(242, 242, 242);
+
+		.product-every {
+			background-color: #fff;
+			border-radius: 10px;
+			padding: 10px;
+			margin: 22px;
+			.product-every-link {
+				cursor: pointer;
+
+				img {
+					border: 1px solid black;
+					width: 100%;
+					height: 200px;
+					display: block;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

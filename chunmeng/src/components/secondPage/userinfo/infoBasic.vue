@@ -21,6 +21,9 @@
       <input type="text" v-model="email" />
     </div>
     <div class="info-box">
+      <label for="">余额(￥):<i class="el-icon-coin"></i>{{parseInt(wealth)}}</label>
+    </div>
+    <div class="info-box">
       <el-button type="primary" plain @click="updateUserinfo()">更改信息</el-button>
     </div>
   </div>
@@ -36,7 +39,8 @@ export default {
       phone: "",
       name: "",
       nickname: "",
-      email: ""
+      email: "",
+      wealth: ""
     };
   },
   mounted() {
@@ -46,6 +50,8 @@ export default {
       this.name = res.data.data.name;
       this.nickname = res.data.data.nickname;
       this.email = res.data.data.email;
+      this.wealth = res.data.data.wealth;
+      console.log(res.data.data)
     });
   },
   methods: {

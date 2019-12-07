@@ -24,10 +24,6 @@
                 <el-menu-item-group>
                   <el-menu-item index="1-2" @click="changePage('info-portrait')">我的头像</el-menu-item>
                 </el-menu-item-group>
-                <el-menu-item-group>
-                  <el-menu-item index="1-3" @click="changePage('info-all')">详细信息</el-menu-item>
-                  <!-- <el-menu-item index="1-3-1">选项1</el-menu-item> -->
-                </el-menu-item-group>
               </el-submenu>
               <el-submenu index="2">
                 <template slot="title">
@@ -40,24 +36,21 @@
                 <el-menu-item-group>
                   <el-menu-item index="2-2" @click="changePage('msg-find')">寻物启事</el-menu-item>
                 </el-menu-item-group>
-                <el-menu-item-group>
-                  <el-menu-item index="2-3" @click="changePage('msg-other')">其他信息</el-menu-item>
-                  <!-- <el-menu-item index="1-3-1">选项1</el-menu-item> -->
-                </el-menu-item-group>
               </el-submenu>
               <el-submenu index="3">
                 <template slot="title">
                 <i class="el-icon-setting"></i>
-                <span slot="title">安全设置</span>
+                <span slot="title">市场管理</span>
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item index="3-1" @click="changePage('safe-account')">账号安全</el-menu-item>
+                  <el-menu-item index="3-1" @click="changePage('msg-shop')">我的店铺</el-menu-item>
+                  <!-- <el-menu-item index="1-3-1">选项1</el-menu-item> -->
                 </el-menu-item-group>
                 <el-menu-item-group>
-                  <el-menu-item index="3-2" @click="changePage('safe-bind')">账号绑定</el-menu-item>
+                  <el-menu-item index="3-2" @click="changePage('msg-purchase')">我的订单</el-menu-item>
                 </el-menu-item-group>
                 <el-menu-item-group>
-                  <el-menu-item index="3-3" @click="changePage('safe-other')">其他</el-menu-item>
+                  <el-menu-item index="3-3" @click="changePage('msg-deposit')">我要充值</el-menu-item>
                   <!-- <el-menu-item index="1-3-1">选项1</el-menu-item> -->
                 </el-menu-item-group>
               </el-submenu>
@@ -68,6 +61,11 @@
               <info-basic v-if="activePage == 'info-basic'" />
             </el-row>
             <info-portrait v-if="activePage == 'info-portrait'" />
+            <msg-lost v-if="activePage == 'msg-lost'" />
+            <msg-find v-if="activePage == 'msg-find'" />
+            <msg-shop v-if="activePage == 'msg-shop'" />
+            <msg-purchase v-if="activePage == 'msg-purchase'" />
+            <msg-deposit v-if="activePage == 'msg-deposit'" />
           </el-col>
         </el-row>
       </el-col>
@@ -78,6 +76,11 @@
 <script>
 import infoBasic from '@/components/secondPage/userinfo/infoBasic';
 import infoPortrait from '@/components/secondPage/userinfo/infoPortrait';
+import msgLost from '@/components/secondPage/userinfo/msgLost';
+import msgFind from '@/components/secondPage/userinfo/msgFind';
+import msgShop from '@/components/secondPage/userinfo/msgShop';
+import msgPurchase from '@/components/secondPage/userinfo/msgPurchase';
+import msgDeposit from '@/components/secondPage/userinfo/msgDeposit';
 
 export default {
   name: "userinfo",
@@ -99,7 +102,12 @@ export default {
   },
   components:{
     infoBasic,
-    infoPortrait
+    infoPortrait,
+    msgLost,
+    msgFind,
+    msgShop,
+    msgPurchase,
+    msgDeposit
   }
 };
 </script>

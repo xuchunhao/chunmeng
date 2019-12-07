@@ -1,0 +1,41 @@
+.msg-shop{
+  padding: 20px;
+
+  .shop-content {
+    padding: 20px 0;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    .shop-content-group-tpl {
+      border-bottom: 1px solid #ccc;
+      position: relative;
+      padding: 20px;
+  
+      &:hover {
+        cursor: pointer;
+        box-shadow: 1px 1px 10px #ccc;
+      }
+      div {
+        padding-left: 100px;
+        h3 {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-weight: 500;
+          font-size: 34;
+        }
+  
+        p {
+          margin: 0 0 10px;
+          font-size: 14px;
+        }
+      }
+  
+      img {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        border: 1px solid black;
+      }
+    }
+  }
+}

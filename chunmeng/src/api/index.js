@@ -46,6 +46,30 @@ var api = {
     let token = cookieFunction.getCookie('token');
     return axios.post('/api/external/property?token=' + token,params)
   },
+  getShop(params) {
+    let token = cookieFunction.getCookie('token');
+    return axios.post('/api/external/get/shop?token=' + token,params)
+  },
+  getProduct(params) {
+    let token = cookieFunction.getCookie('token');
+    return axios.post('/api/external/get/product?token=' + token,params)
+  },
+  addShop(params) {
+    let token = cookieFunction.getCookie('token');
+    return axios.post('/api/external/shop?token=' + token,params)
+  },
+  addProduct(params) {
+    let token = cookieFunction.getCookie('token');
+    return axios.post('/api/external/product?token=' + token,params)
+  },
+  addPurchase(params) {
+    let token = cookieFunction.getCookie('token');
+    return axios.post('/api/external/purchase?token=' + token,params)
+  },
+  deposit(params){
+    let token = cookieFunction.getCookie("token");
+    return axios.post('/api/user/deposit?token=' + token ,params)
+  },
 }
 
 export default api;

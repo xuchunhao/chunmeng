@@ -22,18 +22,19 @@
               <el-menu-item index="find">
                 <router-link to="/find" tag="div">寻物启事</router-link>
               </el-menu-item>
-              <el-menu-item index="2-3">xx信息</el-menu-item>
               <!-- <el-submenu index="2-4">
                 <template slot="title">选项4</template>
                 <el-menu-item index="2-4-1">选项1</el-menu-item>
                 <el-menu-item index="2-4-2">选项2</el-menu-item>
                 <el-menu-item index="2-4-3">选项3</el-menu-item>
-              </el-submenu> -->
+              </el-submenu>-->
             </el-submenu>
-            <el-menu-item index="3">消息中心</el-menu-item>
-            <el-menu-item index="4">
-              <a href="/index" target="_blank">订单管理</a>
+            <el-menu-item index="3">
+              <router-link to="/shop" tag="div">小市场</router-link>
             </el-menu-item>
+            <!-- <el-menu-item index="4">
+              <a href="/index" target="_blank">订单管理</a>
+            </el-menu-item> -->
           </el-menu>
           <el-menu
             :default-active="activeIndex2"
@@ -43,10 +44,15 @@
           >
             <el-menu-item index="1">
               <router-link to="/userinfo">
-                <img class="register-header-logo" :src="'https://www.zustservice.cn/api/external/get/portrait/' + id" alt="">
+                <img
+                  class="register-header-logo"
+                  :src="'https://www.zustservice.cn/api/external/get/portrait/' + id"
+                  alt
+                />
+                个人中心
               </router-link>
             </el-menu-item>
-            <el-submenu trigger="click" index="2">
+            <!-- <el-submenu trigger="click" index="2">
               <template slot="title">我的工作台</template>
               <el-menu-item index="2-1">选项1</el-menu-item>
               <el-menu-item index="2-2">选项2</el-menu-item>
@@ -57,7 +63,7 @@
                 <el-menu-item index="2-4-2">选项2</el-menu-item>
                 <el-menu-item index="2-4-3">选项3</el-menu-item>
               </el-submenu>
-            </el-submenu>
+            </el-submenu> -->
           </el-menu>
         </el-row>
       </el-col>
@@ -73,8 +79,8 @@ export default {
     return {
       activeIndex: "lost",
       activeIndex2: "2",
-      id:"",
-    }
+      id: ""
+    };
   },
   methods: {
     handleSelect(key, keyPath) {
@@ -82,12 +88,11 @@ export default {
     }
   },
   mounted() {
-    api.getUserInfo({})
-      .then(res => {
-        this.id = res.data.data.id;
-      })
-  },
-}
+    api.getUserInfo({}).then(res => {
+      this.id = res.data.data.id;
+    });
+  }
+};
 </script>
 
 <style lang="sass">

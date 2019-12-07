@@ -1,0 +1,32 @@
+.purchase{
+
+  .purchase-box{
+    border: 2px solid #2d8cf0;
+    background-color: #ecf5ff;
+    padding: 30px;
+    border-radius: 5px;
+    .el-col{
+      text-align: center;
+      padding: 20px;
+    }
+    margin: 50px 0;
+  }
+
+  .button-group{
+    button{
+      border-color: #2d8cf0;
+      color: #2d8cf0;
+      background-color: #ecf5ff;
+      &:hover{
+        background-color: #2d8cf0;
+        color: #fff;
+        border-color: #2d8cf0;
+      }
+      &:focus{
+        background-color: #2d8cf0;
+        color: #fff;
+        border-color: #2d8cf0;
+      }
+    }
+  }
+}
