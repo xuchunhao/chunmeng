@@ -12,7 +12,7 @@
             <span @click="changeTag('daily')" :class="{active: indexTag == 'daily'}">日用品</span>
             <span @click="changeTag('else')" :class="{active: indexTag == 'else'}">其他</span>
           </div>
-          <router-link to="/findSubmit" tag="el-button">我要寻物</router-link>
+          <router-link to="/findSubmit" tag="el-button">发布寻物启事</router-link>
         </el-row>
         <div class="find-content">
           <router-link :to="{name:'findDetailed',params:{ findname:item.id ,item:item}}" tag="div" class="find-content-group-tpl" v-for="(item, index) in findArray" :key="index">

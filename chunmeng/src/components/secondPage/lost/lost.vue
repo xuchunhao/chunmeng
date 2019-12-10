@@ -12,7 +12,7 @@
             <span @click="changeTag('daily')" :class="{active: indexTag == 'daily'}">日用品</span>
             <span @click="changeTag('else')" :class="{active: indexTag == 'else'}">其他</span>
           </div>
-          <router-link to="/lostSubmit" tag="el-button">发布失物</router-link>
+          <router-link to="/lostSubmit" tag="el-button">发布失物招领</router-link>
         </el-row>
         <div class="lost-content">
           <router-link :to="{name:'lostDetailed',params:{ lostname:item.id ,item:item}}" tag="div" class="lost-content-group-tpl" v-for="(item, index) in lostArray" :key="index">

@@ -36,7 +36,7 @@ export default {
     getUserInfo(){
       api.getUserInfo({})
       .then(res => {
-        this.$router.push({ path: "/secondPageIndex" });
+        this.$router.push({ path: "/lost" });
       })
     }
   },

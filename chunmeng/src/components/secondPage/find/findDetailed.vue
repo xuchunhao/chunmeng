@@ -6,7 +6,7 @@
           <h1>寻物启事</h1>
           <el-row class="find-detailed-box">
             <el-col :md="8">
-              <p>【失物招领】:</p>
+              <p>【寻物启事】:</p>
               <p>详情介绍:</p>
               <p>丢失者姓名:</p>
               <p>联系方式:</p>

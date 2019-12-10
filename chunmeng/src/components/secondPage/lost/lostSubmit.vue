@@ -25,6 +25,7 @@
             <input v-model="user_qq" type="text" />
           </div>
           <div class="info-box">
+            <label>种类:</label>
             <el-select v-model="value" placeholder="请选择分类">
               <el-option
                 v-for="item in options"
