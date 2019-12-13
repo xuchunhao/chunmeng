@@ -44,7 +44,7 @@ export default {
     };
   },
   mounted() {
-    let id = this.$route.path.substr(1);
+    let id = this.$route.params.lostname;
     let token = cookieFunction.getCookie("token");
     axios
       .get(

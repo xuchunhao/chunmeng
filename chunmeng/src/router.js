@@ -93,22 +93,22 @@ const router = new Router({
         component: () => import('@/components/secondPage/shop/purchase')
       },
       {
-        path:'/:findname',
-        name:'findDetailed',
-        component:() => import('@/components/secondPage/find/findDetailed'),
-      },
-      {
-        path:'/:lostname',
-        name:'lostDetailed',
-        component:() => import('@/components/secondPage/lost/lostDetailed'),
-      },
-      {
-        path:'/:shopname',
+        path:'/shop/:shopname',
         name:'shopDetailed',
         component:() => import('@/components/secondPage/shop/shopDetailed'),
       },
       {
-        path:'/:productname',
+        path:'/find/:findname',
+        name:'findDetailed',
+        component:() => import('@/components/secondPage/find/findDetailed'),
+      },
+      {
+        path:'/lost/:lostname',
+        name:'lostDetailed',
+        component:() => import('@/components/secondPage/lost/lostDetailed'),
+      },
+      {
+        path:'/product/:productname',
         name:'productDetailed',
         component:() => import('@/components/secondPage/shop/productDetailed'),
       },

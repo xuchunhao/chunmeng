@@ -53,10 +53,12 @@ export default {
     }
   },
   mounted() {
+    console.log(this.$route);
     let product = this.$route.params.productname;
-    let shopID = this.$route.params.item.shop_id;
-    this.shopID = this.$route.params.item.shop_id;
-    console.log(this.shopID);
+    // let shopID = this.$route.params.item.shop_id;
+    // this.shopID = this.$route.params.item.shop_id;
+    console.log(this.$route);
+
     api
       .getProduct({
         id: 1,
@@ -67,7 +69,7 @@ export default {
           product_name: product,
           // product_key: "",
           // order: "",
-          shop_id: this.shopID,
+          // shop_id: this.shopID,
           type: "all"
         }
       })
