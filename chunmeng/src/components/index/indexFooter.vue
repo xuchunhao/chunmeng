@@ -4,7 +4,9 @@
       <el-col class="index-footer-content" :xs="24" :sm="24" :md="20" :lg="18" :xl="14">
         <img class="footer-img" src="@/assets/img/logo.png" alt />
         <div>©界面主题 - Design By：许淳皓</div>
-        <div>浙ICP备19007544号</div>
+        <div>
+          <a target="_blank" href="http://beian.miit.gov.cn">浙ICP备19007544号</a>
+        </div>
         <div>
           <img src="@/assets/img/beian.png" alt />
           <a
